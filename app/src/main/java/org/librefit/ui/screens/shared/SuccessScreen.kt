@@ -90,12 +90,6 @@ fun SuccessScreen(
                     successScreenContent(
                         message = message,
                         navigateBack = navController::navigateUp,
-                        navigateToSupportScreen = {
-                            navController.navigate(Route.SupportScreen()) {
-                                launchSingleTop = true
-                                popUpTo(Route.MainScreen)
-                            }
-                        },
                         maxHeight = maxHeight,
                         maxWidth = maxWidth
                     )
@@ -112,12 +106,6 @@ fun SuccessScreen(
                     successScreenContent(
                         message = message,
                         navigateBack = navController::navigateUp,
-                        navigateToSupportScreen = {
-                            navController.navigate(Route.SupportScreen()) {
-                                launchSingleTop = true
-                                popUpTo(Route.MainScreen)
-                            }
-                        },
                         maxHeight = maxHeight,
                         maxWidth = maxWidth
                     )
@@ -131,7 +119,6 @@ fun SuccessScreen(
 private fun LazyListScope.successScreenContent(
     message: SuccessMessage,
     navigateBack: () -> Unit,
-    navigateToSupportScreen: () -> Unit,
     maxHeight: Dp,
     maxWidth: Dp
 ) {
@@ -189,74 +176,7 @@ private fun LazyListScope.successScreenContent(
                 )
 
                 // Animated button
-                val infiniteTransition = rememberInfiniteTransition()
-                val animationProgress by infiniteTransition.animateFloat(
-                    initialValue = 0f,
-                    targetValue = 10f,
-                    animationSpec = infiniteRepeatable(
-                        animation = tween(3000),
-                        repeatMode = RepeatMode.Restart
-                    )
-                )
 
-                val color1 = MaterialTheme.colorScheme.primary
-                val color2 = MaterialTheme.colorScheme.inversePrimary
-                val colors = remember(color1, color2) {
-                    listOf(color1, color2, color1)
-                }
-
-                val shape = ButtonDefaults.shape
-                val pressedShape = ButtonDefaults.pressedShape
-
-                val interactionSource = remember { MutableInteractionSource() }
-                val isPressed by interactionSource.collectIsPressedAsState()
-
-                Button(
-                    onClick = navigateToSupportScreen,
-                    shapes = ButtonDefaults.shapes(),
-                    contentPadding = ButtonDefaults.MediumContentPadding,
-                    interactionSource = interactionSource,
-                    modifier = Modifier.drawWithCache {
-
-                        // Everything inside onDrawWithContent runs in the draw phase so reading 'animationProgress' here will not cause recomposition
-                        onDrawWithContent {
-                            drawContent() // Draw the button first
-
-                            // Calculate the radius using the exact size of the button
-                            val radius = (size.width * animationProgress).coerceAtLeast(0.1f)
-
-                            val brush = Brush.radialGradient(
-                                colors = colors,
-                                radius = radius,
-                                center = center
-                            )
-
-                            // Draw the animated border
-                            drawOutline(
-                                outline = (if(isPressed) pressedShape else shape).createOutline(size, layoutDirection, this),
-                                brush = brush,
-                                style = Stroke(width = 10f)
-                            )
-                        }
-                    }
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_favorite),
-                            contentDescription = null
-                        )
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                        Text(
-                            text = stringResource(R.string.lets_build_it_together),
-                            style = MaterialTheme.typography.titleSmallEmphasized,
-                            textAlign = TextAlign.Center
-                        )
-                    }
-                }
                 LibreFitButton(
                     onClick = navigateBack,
                     text = stringResource(R.string.label_continue),

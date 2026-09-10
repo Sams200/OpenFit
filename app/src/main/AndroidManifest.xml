@@ -40,23 +40,6 @@
         </activity>
 
         <activity
-            android:name=".activities.PrivacyActivity"
-            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
-            android:theme="@style/Theme.LibreFit.SplashScreen"
-            android:exported="true">
-            <!-- VIEW_PERMISSION_USAGE shows a selectable information icon on
-                 LibreFit permission's page in system settings.
-                 VIEW_PERMISSION_USAGE_FOR_PERIOD shows a selectable information
-                 icon on the Privacy Dashboard screen. -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".activities.ErrorActivity"
             android:exported="true"
             android:theme="@style/Theme.LibreFit.SplashScreen"

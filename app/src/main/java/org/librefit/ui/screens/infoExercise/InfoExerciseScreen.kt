@@ -138,7 +138,6 @@ fun SharedTransitionScope.InfoExerciseScreen(
     navController: NavHostController,
     viewModel: InfoExerciseScreenViewModel = hiltViewModel()
 ) {
-    val showExercisesImages by viewModel.showExercisesImages.collectAsStateWithLifecycle()
 
     val workoutsWithExercises by viewModel.workoutsWithExercises.collectAsStateWithLifecycle()
 
@@ -153,12 +152,9 @@ fun SharedTransitionScope.InfoExerciseScreen(
         exerciseDC = uiExerciseDC,
         animatedVisibilityScope = animatedVisibilityScope,
         workoutsWithExercises = workoutsWithExercises,
-        showExercisesImages = showExercisesImages,
         points = points,
         exerciseChart = exerciseChart,
         navController = navController,
-        setTrueShowExercisesImages = viewModel::setTrueShowExercisesImages,
-        setFalseShowExercisesImages = viewModel::setFalseShowExercisesImages,
         updateExerciseChart = viewModel::updateExerciseChart,
         deleteExercise = viewModel::deleteExercise
     )
@@ -170,21 +166,16 @@ fun SharedTransitionScope.InfoExerciseScreen(
 private fun SharedTransitionScope.InfoExerciseScreenContent(
     id: Long,
     exerciseDC: UiExerciseDC,
-    showExercisesImages: Boolean?,
     animatedVisibilityScope: AnimatedVisibilityScope,
     workoutsWithExercises: List<UiWorkoutWithExercisesAndSets>,
     points: List<Point>,
     exerciseChart: ExerciseChart,
     navController: NavHostController,
-    setTrueShowExercisesImages: () -> Unit,
-    setFalseShowExercisesImages: () -> Unit,
     updateExerciseChart: (ExerciseChart) -> Unit,
     deleteExercise: () -> Unit
 ) {
     val pagerState = rememberPagerState(pageCount = { InfoExercisePages.entries.size })
     val coroutineScope = rememberCoroutineScope()
-
-    val stringId = remember(id) { if (id == 0L) "" else id.toString() }
 
     val showConfirmDeleteDialog = remember { mutableStateOf(false) }
 
@@ -248,22 +239,6 @@ private fun SharedTransitionScope.InfoExerciseScreenContent(
                         textAlign = TextAlign.Center
                     )
                 }
-                item {
-                    AnimatedVisibility(
-                        visible = showExercisesImages != false,
-                        enter = fadeIn() + expandVertically(),
-                        exit = fadeOut() + shrinkVertically()
-                    ) {
-                        AlternatingImages(
-                            stringId = stringId,
-                            exercise = exerciseDC,
-                            showExercisesImages = showExercisesImages,
-                            setTrueShowExercisesImages = setTrueShowExercisesImages,
-                            setFalseShowExercisesImages = setFalseShowExercisesImages,
-                            animatedVisibilityScope = animatedVisibilityScope
-                        )
-                    }
-                }
                 stickyHeader {
                     PrimaryTabRow(selectedTabIndex = pagerState.currentPage) {
                         InfoExercisePages.entries.forEachIndexed { i, enum ->
@@ -281,7 +256,6 @@ private fun SharedTransitionScope.InfoExerciseScreenContent(
                                         text = stringResource(
                                             id = when (enum) {
                                                 InfoExercisePages.DETAILS -> R.string.details
-                                                InfoExercisePages.INSTRUCTIONS -> R.string.instructions
                                                 InfoExercisePages.HISTORY -> R.string.history
                                             }
                                         )
@@ -292,14 +266,12 @@ private fun SharedTransitionScope.InfoExerciseScreenContent(
                                         painter = painterResource(
                                             id = when (enum) {
                                                 InfoExercisePages.DETAILS -> R.drawable.ic_badge
-                                                InfoExercisePages.INSTRUCTIONS -> R.drawable.ic_reference
                                                 InfoExercisePages.HISTORY -> R.drawable.ic_history
                                             }
                                         ),
                                         contentDescription = stringResource(
                                             id = when (enum) {
                                                 InfoExercisePages.DETAILS -> R.string.details
-                                                InfoExercisePages.INSTRUCTIONS -> R.string.instructions
                                                 InfoExercisePages.HISTORY -> R.string.history
                                             }
                                         )
@@ -327,11 +299,6 @@ private fun SharedTransitionScope.InfoExerciseScreenContent(
                                 updateExerciseChart = updateExerciseChart,
                                 maxHeight = maxHeight,
                                 animatedVisibilityScope = animatedVisibilityScope
-                            )
-
-                            InfoExercisePages.INSTRUCTIONS -> InstructionsPage(
-                                maxHeight,
-                                exerciseDC.instructions
                             )
 
                             null -> error("Invalid page index: $pageIndex. Expected: ${0..InfoExercisePages.entries.size}")
@@ -496,32 +463,6 @@ private fun DetailsPage(
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun InstructionsPage(
-    maxHeight: Dp,
-    instructions: List<String>,
-) {
-    LazyColumn(
-        modifier = Modifier.height(maxHeight),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        item {
-            Text(
-                text = buildString {
-                    instructions.forEachIndexed { index, instruction ->
-                        // For all items except the first, add the separator BEFORE the item.
-                        if (index > 0) {
-                            append("\n\n")
-                        }
-                        append("${index + 1}. $instruction")
-                    }
-                }
-            )
         }
     }
 }
@@ -767,224 +708,6 @@ private fun SharedTransitionScope.HistoryPage(
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalSharedTransitionApi::class, ExperimentalMaterial3ExpressiveApi::class)
-@Composable
-private fun SharedTransitionScope.AlternatingImages(
-    stringId: String,
-    exercise: UiExerciseDC,
-    showExercisesImages: Boolean?,
-    setTrueShowExercisesImages: () -> Unit,
-    setFalseShowExercisesImages: () -> Unit,
-    animatedVisibilityScope: AnimatedVisibilityScope
-) {
-    var currentImageIndex by remember { mutableIntStateOf(0) }
-
-    var isRunning by rememberSaveable { mutableStateOf(true) }
-
-
-    LaunchedEffect(exercise.images) {
-        while (exercise.images.isNotEmpty()) {
-            if (isRunning) {
-                currentImageIndex = (currentImageIndex + 1) % exercise.images.size
-            }
-            delay(1000.milliseconds)
-        }
-    }
-
-    AnimatedContent(showExercisesImages) { show ->
-        Column {
-            if (show == true) {
-                Box(
-                    modifier = Modifier.padding(15.dp),
-                    contentAlignment = Alignment.BottomEnd
-                ) {
-                    val model =
-                        remember(currentImageIndex) { exercise.images.getOrNull(currentImageIndex) }
-                    AsyncImage(
-                        model = model?.let { "file:///android_asset/${it}" },
-                        fallback = painterResource(R.drawable.no_image),
-                        contentDescription = exercise.name,
-                        contentScale = ContentScale.Crop,
-                        colorFilter = if (model == null) ColorFilter.tint(MaterialTheme.colorScheme.onSurfaceVariant) else null,
-                        filterQuality = FilterQuality.High,
-                        modifier = Modifier
-                            .sharedElement(
-                                sharedContentState = rememberSharedContentState(stringId + exercise.id),
-                                animatedVisibilityScope = animatedVisibilityScope
-                            )
-                            .aspectRatio(
-                                ratio = rememberAssetAspectRatio(model, 16f / 9)
-                            )
-                            .fillMaxWidth()
-                            .clip(MaterialTheme.shapes.extraLarge)
-                            .border(
-                                width = 0.5.dp,
-                                color = MaterialTheme.colorScheme.outlineVariant,
-                                MaterialTheme.shapes.extraLarge
-                            ),
-                    )
-
-                    if (exercise.images.isNotEmpty()) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.End
-                        ) {
-
-                            ToggleButton(
-                                checked = isRunning,
-                                modifier = Modifier.padding(10.dp),
-                                onCheckedChange = { isRunning = it },
-                                shapes = ToggleButtonDefaults.shapes()
-                            ) {
-                                Icon(
-                                    painter = painterResource(
-                                        if (isRunning) R.drawable.ic_pause else R.drawable.ic_play_arrow
-                                    ),
-                                    contentDescription = stringResource(if (isRunning) R.string.pause else R.string.resume),
-                                )
-                            }
-                        }
-                    }
-                }
-
-            } else {
-                ElevatedCard(
-                    shape = MaterialTheme.shapes.largeIncreased,
-                    modifier = Modifier.padding(15.dp),
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(20.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(20.dp)
-                    ) {
-                        Text(
-                            modifier = Modifier.padding(15.dp),
-                            text = stringResource(R.string.ai_images_warning),
-                            textAlign = TextAlign.Center
-                        )
-                        val interactionSources = remember { List(2) { MutableInteractionSource() } }
-
-                        ButtonGroup(
-                            overflowIndicator = {}
-                        ) {
-                            customItem(
-                                menuContent = {},
-                                buttonGroupContent = {
-                                    LibreFitButton(
-                                        modifier = Modifier
-                                            .weight(1f)
-                                            .animateWidth(interactionSources[0]),
-                                        text = stringResource(R.string.show),
-                                        icon = painterResource(R.drawable.ic_image),
-                                        interactionSource = interactionSources[0]
-                                    ) {
-                                        setTrueShowExercisesImages()
-                                    }
-                                }
-                            )
-                            customItem(
-                                menuContent = {},
-                                buttonGroupContent = {
-                                    LibreFitButton(
-                                        modifier = Modifier
-                                            .weight(1f)
-                                            .animateWidth(interactionSources[1]),
-                                        text = stringResource(R.string.hide),
-                                        icon = painterResource(R.drawable.ic_hide_image),
-                                        interactionSource = interactionSources[1],
-                                        elevated = false
-                                    ) {
-                                        setFalseShowExercisesImages()
-                                    }
-                                }
-                            )
-                        }
-
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-@OptIn(ExperimentalSharedTransitionApi::class)
-@Preview
-@Composable
-private fun InfoExercisePreview() {
-    LibreFitTheme(dynamicColor = false, themeMode = ThemeMode.DARK) {
-        SharedTransitionLayout {
-            AnimatedVisibility(visible = true) {
-                InfoExerciseScreenContent(
-                    id = 0L,
-                    exerciseChart = TimeChart.BEST_TIME,
-                    exerciseDC = UiExerciseDC(
-                        name = "3/4 Sit-Up",
-                        force = Force.PULL,
-                        level = Level.BEGINNER,
-                        mechanic = Mechanic.COMPOUND,
-                        equipment = Equipment.BODY_ONLY,
-                        primaryMuscles = persistentListOf(Muscle.ABDOMINALS),
-                        instructions = persistentListOf(
-                            "Lie down on the floor and secure your feet. Your legs should be bent at the knees.",
-                            "Place your hands behind or to the side of your head. You will begin with your back on the ground. This will be your starting position.",
-                            "Flex your hips and spine to raise your torso toward your knees.",
-                            "At the top of the contraction your torso should be perpendicular to the ground. Reverse the motion, going only ¾ of the way down.",
-                            "Repeat for the recommended amount of repetitions."
-                        ),
-                        category = Category.STRENGTH,
-                        images = persistentListOf("3_4_Sit-Up/0.jpg", "3_4_Sit-Up/1.jpg")
-                    ),
-                    showExercisesImages = false,
-                    animatedVisibilityScope = this,
-                    workoutsWithExercises = listOf(
-                        UiWorkoutWithExercisesAndSets(
-                            workout = UiWorkout(id = Random.nextLong(), title = "My first workout", notes = "Very funny"),
-                            exercisesWithSets = persistentListOf(
-                                UiExerciseWithSets(
-                                    exercise = UiExercise(
-                                        setMode = SetMode.DURATION,
-                                        restTime = 120,
-                                        notes = "This is the first exercise",
-                                        workoutId = Random.nextLong()
-                                    ),
-                                    sets = persistentListOf(
-                                        UiSet(
-                                            completed = true
-                                        )
-                                    )
-                                ),
-                                UiExerciseWithSets()
-                            )
-                        ),
-                        UiWorkoutWithExercisesAndSets(
-                            workout = UiWorkout(id = Random.nextLong(), title = "My second workout"),
-                            exercisesWithSets = persistentListOf(
-                                UiExerciseWithSets(
-                                    exercise = UiExercise(
-                                        setMode = SetMode.DURATION,
-                                        notes = "This is the second exercise",
-                                        workoutId = Random.nextLong()
-                                    ),
-                                    sets = persistentListOf()
-                                )
-                            )
-                        )
-                    ),
-                    points = emptyList(),
-                    navController = rememberNavController(),
-                    setTrueShowExercisesImages = {},
-                    setFalseShowExercisesImages = {},
-                    updateExerciseChart = {},
-                    deleteExercise = {}
-                )
             }
         }
     }

@@ -22,9 +22,7 @@ fun ExerciseDC.toUi(): UiExerciseDC {
         equipment = this.equipment,
         primaryMuscles = this.primaryMuscles.toImmutableList(),
         secondaryMuscles = this.secondaryMuscles.toImmutableList(),
-        instructions = this.instructions.toImmutableList(),
         category = this.category,
-        images = this.images.toImmutableList(),
         isCustomExercise = this.isCustomExercise
     )
 }
@@ -39,9 +37,7 @@ fun UiExerciseDC.toEntity(): ExerciseDC {
         equipment = this.equipment,
         primaryMuscles = this.primaryMuscles,
         secondaryMuscles = this.secondaryMuscles,
-        instructions = this.instructions,
         category = this.category,
-        images = this.images,
         isCustomExercise = this.isCustomExercise
     )
 }

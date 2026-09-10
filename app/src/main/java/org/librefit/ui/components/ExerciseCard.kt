@@ -245,27 +245,6 @@ fun SharedTransitionScope.ExerciseCard(
                         },
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val model =
-                        remember(exerciseWithSets.exerciseDC.images) { exerciseWithSets.exerciseDC.images.firstOrNull() }
-                    if (showExercisesImages == true) {
-                        AsyncImage(
-                            model = model?.let { "file:///android_asset/${it}" },
-                            fallback = painterResource(R.drawable.no_image),
-                            contentDescription = exerciseWithSets.exerciseDC.name,
-                            contentScale = ContentScale.Crop,
-                            colorFilter = if (model == null) ColorFilter.tint(MaterialTheme.colorScheme.onSurfaceVariant) else null,
-                            modifier = Modifier
-                                .padding(end = 10.dp)
-                                .sharedElement(
-                                    sharedContentState = rememberSharedContentState(
-                                        key = exerciseWithSets.exercise.id.toString() + exerciseWithSets.exerciseDC.id
-                                    ),
-                                    animatedVisibilityScope = animatedVisibilityScope
-                                )
-                                .size(50.dp)
-                                .clip(MaterialTheme.shapes.medium)
-                        )
-                    }
                     Text(
                         text = exerciseWithSets.exerciseDC.name,
                         style = MaterialTheme.typography.headlineSmall,
@@ -985,7 +964,6 @@ private fun ExerciseCardPreview() {
                 sets = persistentListOf(UiSet(completed = true), UiSet(elapsedTime = 100)),
                 exerciseDC = UiExerciseDC(
                     name = "Exercise name",
-                    images = persistentListOf("3_4_Sit-Up/0.jpg")
                 )
             )
         )

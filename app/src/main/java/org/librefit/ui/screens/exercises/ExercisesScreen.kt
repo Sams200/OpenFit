@@ -72,6 +72,7 @@ import org.librefit.ui.components.animations.NoResultLottie
 import org.librefit.ui.components.dialogs.ConfirmDialog
 import org.librefit.ui.models.UiExerciseDC
 import org.librefit.ui.models.mappers.toEntity
+import org.librefit.ui.screens.exercises.ItemExerciseDC
 import org.librefit.ui.screens.shared.SharedViewModel
 import org.librefit.ui.theme.LibreFitTheme
 import org.librefit.util.Formatter.exerciseEnumToStringId
@@ -96,8 +97,6 @@ fun SharedTransitionScope.ExercisesScreen(
     val selectedExercisesList by viewModel.selectedExercises.collectAsStateWithLifecycle()
 
     val selectedExercisesIds by viewModel.selectedExerciseIds.collectAsStateWithLifecycle()
-
-    val isSupporter by viewModel.isSupporter.collectAsStateWithLifecycle()
 
     val showExercisesImages by viewModel.showExercisesImages.collectAsStateWithLifecycle()
 
@@ -146,7 +145,7 @@ fun SharedTransitionScope.ExercisesScreen(
         },
         navigateToEditExercise = {
             navController.navigate(
-                if (isSupporter) Route.EditExerciseScreen() else Route.SupportScreen(supporterInfo = true)
+                Route.EditExerciseScreen()
             ) { launchSingleTop = true }
         }
     )
@@ -263,8 +262,6 @@ private fun SharedTransitionScope.ExercisesScreenContent(
                     modifier = Modifier.animateItem(),
                     addExercises = addExercises,
                     exercise = exercise,
-                    showExercisesImages = showExercisesImages,
-                    animatedVisibilityScope = animatedVisibilityScope,
                     onAddToggle = { toggleSelectedExercise(exercise.id) },
                     isSelected = exercise.id in selectedExercisesIdList,
                     onInfo = { navigateToInfoExercise(exercise.toEntity()) }
@@ -281,8 +278,6 @@ private fun SharedTransitionScope.ItemExerciseDC(
     addExercises: Boolean,
     exercise: UiExerciseDC,
     isSelected: Boolean,
-    showExercisesImages: Boolean?,
-    animatedVisibilityScope: AnimatedVisibilityScope,
     onAddToggle: () -> Unit,
     onInfo: () -> Unit,
 ) {
@@ -306,28 +301,7 @@ private fun SharedTransitionScope.ItemExerciseDC(
         Row(
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            val model = remember { exercise.images.firstOrNull() }
-            if (showExercisesImages == true) {
-                AsyncImage(
-                    model = model?.let { "file:///android_asset/${it}" },
-                    fallback = painterResource(R.drawable.no_image),
-                    contentDescription = exercise.name,
-                    contentScale = ContentScale.Crop,
-                    colorFilter = if (model == null) ColorFilter.tint(LocalContentColor.current) else null,
-                    filterQuality = FilterQuality.High,
-                    modifier = Modifier
-                        .sharedElement(
-                            sharedContentState = rememberSharedContentState(exercise.id),
-                            animatedVisibilityScope = animatedVisibilityScope
-                        )
-                        .size(100.dp)
-                        .clip(MaterialTheme.shapes.large)
-                )
-            }
             Column(
-                modifier = Modifier.padding(
-                    start = (if (showExercisesImages == true) 20 else 10).dp
-                ),
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
@@ -389,35 +363,30 @@ private fun ExercisesScreenPreview() {
                         UiExerciseDC(
                             id = "1",
                             name = "Running, Treadmill",
-                            images = persistentListOf("Running_Treadmill/0.webp"),
                             equipment = Equipment.BODY_ONLY,
                             category = Category.STRENGTH
                         ),
                         UiExerciseDC(
                             id = "2",
                             name = "Trail Running/Walking",
-                            images = persistentListOf("Trail_Running_Walking/0.webp"),
                             equipment = Equipment.BODY_ONLY,
                             category = Category.STRETCHING
                         ),
                         UiExerciseDC(
                             id = "3",
                             name = "Alternating Cable Shoulder Press",
-                            images = persistentListOf("Alternating_Cable_Shoulder_Press/0.webp"),
                             equipment = Equipment.MACHINE,
                             category = Category.STRENGTH
                         ),
                         UiExerciseDC(
                             id = "4",
                             name = "Alternating Deltoid Raise",
-                            images = persistentListOf("Alternating_Deltoid_Raise/0.webp"),
                             equipment = Equipment.OTHER,
                             category = Category.STRENGTH
                         ),
                         UiExerciseDC(
                             id = "5",
                             name = "Alternating Floor Press",
-                            images = persistentListOf("Alternating_Floor_Press/0.webp"),
                             equipment = Equipment.FOAM_ROLL,
                             category = Category.STRETCHING
                         ),

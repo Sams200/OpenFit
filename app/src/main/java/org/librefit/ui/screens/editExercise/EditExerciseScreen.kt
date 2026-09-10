@@ -79,7 +79,6 @@ import org.librefit.util.Formatter.exerciseEnumToStringId
 @Composable
 fun SharedTransitionScope.EditExerciseScreen(
     navController: NavHostController,
-    animatedVisibilityScope: AnimatedVisibilityScope,
     id: Long, // Used only for transition animation
     exerciseDCid: String,
     viewModel: EditExerciseScreenViewModel = hiltViewModel()
@@ -87,13 +86,10 @@ fun SharedTransitionScope.EditExerciseScreen(
 
     val exerciseDC by viewModel.exerciseDC.collectAsStateWithLifecycle()
 
-    val showExercisesImages by viewModel.showExercisesImages.collectAsStateWithLifecycle()
 
     val isCreateMode = exerciseDC.id.isBlank()
 
     EditExerciseScreenContent(
-        stringId = if (id == 0L) "" else id.toString(),
-        exerciseDcId = exerciseDC.id,
         isCreateMode = isCreateMode,
         name = exerciseDC.name,
         force = exerciseDC.force,
@@ -102,18 +98,13 @@ fun SharedTransitionScope.EditExerciseScreen(
         equipment = exerciseDC.equipment,
         primaryMuscles = exerciseDC.primaryMuscles,
         secondaryMuscles = exerciseDC.secondaryMuscles,
-        instructions = exerciseDC.instructions,
         category = exerciseDC.category,
-        images = exerciseDC.images,
-        showExercisesImages = showExercisesImages,
         navigateBack = navController::navigateUp,
-        animatedVisibilityScope = animatedVisibilityScope,
         updateValue = viewModel::updateValue,
         updatePrimaryMuscles = viewModel::updatePrimaryMuscles,
         updateSecondaryMuscles = viewModel::updateSecondaryMuscles,
         saveExercise = viewModel::saveExercise,
         updateName = viewModel::updateName,
-        updateInstructions = viewModel::updateInstructions,
         navigateToSuccessScreen = {
             navController.navigate(Route.SuccessScreen(SuccessMessage.EXERCISE_SAVED)) {
                 launchSingleTop = true
@@ -124,15 +115,13 @@ fun SharedTransitionScope.EditExerciseScreen(
                     )
                 ) { inclusive = true }
             }
-        }
+        },
     )
 }
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun SharedTransitionScope.EditExerciseScreenContent(
-    exerciseDcId: String,
-    stringId: String,
     isCreateMode: Boolean,
     name: String,
     force: Force?,
@@ -141,16 +130,11 @@ private fun SharedTransitionScope.EditExerciseScreenContent(
     equipment: Equipment?,
     primaryMuscles: List<Muscle>,
     secondaryMuscles: List<Muscle>,
-    instructions: List<String>,
-    images: List<String>,
     category: Category,
-    showExercisesImages: Boolean?,
-    animatedVisibilityScope: AnimatedVisibilityScope,
     navigateBack: () -> Unit,
     updateValue: (ExerciseProperty) -> Unit,
     updatePrimaryMuscles: (Muscle) -> Unit,
     updateSecondaryMuscles: (Muscle) -> Unit,
-    updateInstructions: (String) -> Unit,
     updateName: (String) -> Unit,
     saveExercise: () -> Unit,
     navigateToSuccessScreen: () -> Unit
@@ -192,34 +176,6 @@ private fun SharedTransitionScope.EditExerciseScreenContent(
             innerPadding = innerPadding,
             verticalSpacing = 20.dp
         ) {
-            item {
-                // TODO: implement display all images (like in a horizontal pager)
-                val model = remember(images) { images.firstOrNull() }
-                if (showExercisesImages == true) {
-                    AsyncImage(
-                        model = model?.let { "file:///android_asset/${it}" },
-                        fallback = painterResource(R.drawable.no_image),
-                        contentDescription = name,
-                        contentScale = ContentScale.Crop,
-                        filterQuality = FilterQuality.High,
-                        colorFilter = if (model == null) ColorFilter.tint(MaterialTheme.colorScheme.onSurfaceVariant) else null,
-                        modifier = Modifier
-                            .sharedElement(
-                                sharedContentState = rememberSharedContentState(stringId + exerciseDcId),
-                                animatedVisibilityScope = animatedVisibilityScope
-                            )
-                            .fillMaxWidth()
-                            .clip(MaterialTheme.shapes.extraLarge)
-                            .border(
-                                0.5.dp,
-                                color = MaterialTheme.colorScheme.outlineVariant,
-                                shape = MaterialTheme.shapes.extraLarge
-                            ),
-                    )
-                }
-            }
-            item {
-            }
             item {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -305,15 +261,6 @@ private fun SharedTransitionScope.EditExerciseScreenContent(
                         updateValue = updateValue
                     )
                 }
-            }
-            item {
-                OutlinedTextField(
-                    value = instructions.joinToString(separator = "\n") { it },
-                    placeholder = { Text(text = stringResource(R.string.instructions)) },
-                    onValueChange = updateInstructions,
-                    shape = MaterialTheme.shapes.largeIncreased,
-                    modifier = Modifier.fillMaxWidth()
-                )
             }
         }
     }
@@ -412,8 +359,6 @@ private fun EditExerciseScreenContentPreview() {
         SharedTransitionLayout {
             AnimatedVisibility(true) {
                 EditExerciseScreenContent(
-                    stringId = "",
-                    exerciseDcId = "",
                     isCreateMode = true,
                     navigateBack = {},
                     name = e.name,
@@ -423,16 +368,11 @@ private fun EditExerciseScreenContentPreview() {
                     equipment = e.equipment,
                     primaryMuscles = e.primaryMuscles,
                     secondaryMuscles = e.secondaryMuscles,
-                    instructions = e.instructions,
                     category = e.category,
-                    images = e.images,
-                    showExercisesImages = null,
-                    animatedVisibilityScope = this,
                     saveExercise = {},
                     updatePrimaryMuscles = {},
                     updateSecondaryMuscles = {},
                     updateValue = {},
-                    updateInstructions = {},
                     updateName = {},
                     navigateToSuccessScreen = {}
                 )

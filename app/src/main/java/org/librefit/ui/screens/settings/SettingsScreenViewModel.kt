@@ -36,7 +36,7 @@ class SettingsScreenViewModel @Inject constructor(
     val keepScreenOn = userPreferences.workoutScreenOn
     val language = userPreferences.language
     val restTimerSoundOn = userPreferences.restTimerSoundOn
-    val isSupporter = userPreferences.isSupporter
+
     val isWorkoutHeaderSticky = userPreferences.isWorkoutHeaderSticky
     val useScrollWheelForInput = userPreferences.useScrollWheelForInput
     val showExercisesImages = userPreferences.showExercisesImages

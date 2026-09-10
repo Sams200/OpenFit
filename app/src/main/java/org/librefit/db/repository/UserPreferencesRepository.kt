@@ -129,15 +129,6 @@ class UserPreferencesRepository @Inject constructor(
             started = SharingStarted.Eagerly,
             initialValue = false
         )
-
-    val isSupporter: StateFlow<Boolean> = dataStore.data
-        .map { preferences -> preferences[IS_SUPPORTER_KEY] == true }
-        .stateIn(
-            scope = applicationScope,
-            started = SharingStarted.Eagerly,
-            initialValue = false
-        )
-
     val pastVersionCode: StateFlow<Long> = dataStore.data
         .map { preferences -> preferences[PAST_VERSION_CODE_KEY] ?: -1L }
         .stateIn(
@@ -301,10 +292,6 @@ class UserPreferencesRepository @Inject constructor(
 
     suspend fun saveShowWelcomeScreen(show: Boolean) {
         dataStore.edit { preferences -> preferences[SHOW_WELCOME_SCREEN_KEY] = show }
-    }
-
-    suspend fun saveIsSupporter(isSupporter: Boolean) {
-        dataStore.edit { preferences -> preferences[IS_SUPPORTER_KEY] = isSupporter }
     }
 
     suspend fun savePastVersionCode(versionCode: Long) {

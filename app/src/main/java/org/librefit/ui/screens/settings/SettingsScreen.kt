@@ -85,8 +85,6 @@ fun SettingsScreen(
 
     val currentPreference by viewModel.currentPreference.collectAsStateWithLifecycle()
 
-    val isSupporter by viewModel.isSupporter.collectAsStateWithLifecycle()
-
     val isWorkoutHeaderSticky by viewModel.isWorkoutHeaderSticky.collectAsStateWithLifecycle()
 
     val useScrollWheelForInput by viewModel.useScrollWheelForInput.collectAsStateWithLifecycle()
@@ -133,7 +131,6 @@ fun SettingsScreen(
         selectedLanguage = selectedLanguage,
         keepWorkoutScreenOn = keepWorkoutScreenOn,
         restTimerSoundOn = restTimerSoundOn,
-        isSupporter = isSupporter,
         useScrollWheelForInput = useScrollWheelForInput,
         showExercisesImages = showExercisesImages,
         isWorkoutHeaderSticky = isWorkoutHeaderSticky,
@@ -162,7 +159,6 @@ private fun SettingsScreenContent(
     selectedLanguage: Language,
     keepWorkoutScreenOn: Boolean,
     restTimerSoundOn: Boolean,
-    isSupporter: Boolean,
     isWorkoutHeaderSticky: Boolean,
     useScrollWheelForInput: Boolean,
     showExercisesImages: Boolean?,
@@ -200,13 +196,7 @@ private fun SettingsScreenContent(
                 item {
                     SettingItem(
                         onClick = {
-                            if (isSupporter) {
-                                onMaterialModeChange(!materialModeOn)
-                            } else {
-                                navController.navigate(Route.SupportScreen(true)) {
-                                    launchSingleTop = true
-                                }
-                            }
+                            onMaterialModeChange(!materialModeOn)
                         },
                         icon = painterResource(R.drawable.ic_material),
                         settingName = stringResource(id = R.string.material_you),
@@ -410,7 +400,6 @@ fun SettingsScreenPreview() {
             keepWorkoutScreenOn = keepWorkoutScreenOn,
             restTimerSoundOn = restTimerSoundOn,
             updatePreferences = {},
-            isSupporter = Random.nextBoolean(),
             isWorkoutHeaderSticky = isWorkoutHeaderSticky,
             useScrollWheelForInput = useScrollWheelForInput,
             showExercisesImages = displayExercisesImages,

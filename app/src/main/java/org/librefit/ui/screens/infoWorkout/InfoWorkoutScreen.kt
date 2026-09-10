@@ -410,7 +410,6 @@ private fun SharedTransitionScope.InfoWorkoutScreenContent(
                 ExerciseCardSmall(
                     exerciseWithSets = e,
                     isRoutine = isRoutine,
-                    showExercisesImages = showExercisesImages,
                     animatedVisibilityScope = animatedVisibilityScope
                 ) {
                     navController.navigate(
@@ -448,7 +447,6 @@ private fun InfoRoutineScreenPreview() {
                         UiExerciseWithSets(
                             exerciseDC = UiExerciseDC(
                                 name = "Name exercise",
-                                images = persistentListOf("3_4_Sit-Up/0.jpg")
                             ),
                             sets = persistentListOf(UiSet(), UiSet())
                         )

@@ -584,14 +584,12 @@ private fun ProfileScreenPreview() {
                                 Icon(
                                     painter = painterResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.drawable.ic_library
                                             MainScreenPages.HOME -> R.drawable.ic_home
                                             MainScreenPages.PROFILE -> R.drawable.ic_person
                                         }
                                     ),
                                     contentDescription = stringResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.string.library
                                             MainScreenPages.HOME -> R.string.home
                                             MainScreenPages.PROFILE -> R.string.profile
                                         }
@@ -602,7 +600,6 @@ private fun ProfileScreenPreview() {
                                 Text(
                                     text = stringResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.string.library
                                             MainScreenPages.HOME -> R.string.home
                                             MainScreenPages.PROFILE -> R.string.profile
                                         }

@@ -404,7 +404,6 @@ private fun EditWorkoutScreenPreview() {
                             exercise = UiExercise(setMode = SetMode.DURATION, restTime = 0),
                             exerciseDC = UiExerciseDC(
                                 name = "Running, Treadmill",
-                                images = persistentListOf("Running_Treadmill/0.webp"),
                                 equipment = Equipment.OTHER,
                                 category = Category.CARDIO
                             ),
@@ -414,7 +413,6 @@ private fun EditWorkoutScreenPreview() {
                             exercise = UiExercise(setMode = SetMode.LOAD, restTime = 120),
                             exerciseDC = UiExerciseDC(
                                 name = "Barbell Bench Press - Medium Grip",
-                                images = persistentListOf("Barbell_Bench_Press_-_Medium_Grip/0.webp"),
                                 equipment = Equipment.MACHINE,
                                 category = Category.STRENGTH
                             ),

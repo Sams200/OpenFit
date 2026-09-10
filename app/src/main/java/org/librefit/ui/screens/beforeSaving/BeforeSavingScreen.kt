@@ -220,6 +220,11 @@ fun SharedTransitionScope.BeforeSavingScreenContent(
     val inputTransformation = remember { TimeInputTransformation(true) }
     val outputTransformation = remember { TimeOutputTransformation(true) }
 
+    updateWorkoutTitle(Formatter.getShortDateFromLocalDate(workout.completed))
+//    LaunchedEffect(Formatter.getShortDateFromLocalDate(workout.completed)) {
+//        updateWorkoutTitle(Formatter.getShortDateFromLocalDate(workout.completed))
+//    }
+
     // Sync elapsed time with time text field
     LaunchedEffect(workout.timeElapsed) {
         val formatted =
@@ -547,7 +552,6 @@ private fun BeforeSavingScreenPreview() {
             exercise = UiExercise(setMode = SetMode.DURATION, restTime = 0, notes="Easy pace just to warm up"),
             exerciseDC = UiExerciseDC(
                 name = "Running, Treadmill",
-                images = persistentListOf("Running_Treadmill/0.webp"),
                 equipment = Equipment.OTHER,
                 category = Category.CARDIO
             ),
@@ -561,7 +565,6 @@ private fun BeforeSavingScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Barbell Bench Press - Medium Grip",
-                images = persistentListOf("Barbell_Bench_Press_-_Medium_Grip/0.webp"),
                 equipment = Equipment.MACHINE,
                 category = Category.STRENGTH
             ),
@@ -590,7 +593,6 @@ private fun BeforeSavingScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Pushups",
-                images = persistentListOf("Pushups/0.webp"),
                 equipment = Equipment.BODY_ONLY,
                 category = Category.STRENGTH
             ),
@@ -607,7 +609,6 @@ private fun BeforeSavingScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Chest And Front Of Shoulder Stretch",
-                images = persistentListOf("Chest_And_Front_Of_Shoulder_Stretch/0.webp"),
                 equipment = Equipment.BODY_ONLY,
                 category = Category.STRETCHING
             ),

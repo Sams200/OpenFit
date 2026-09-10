@@ -43,7 +43,6 @@ class SettingsScreenViewModelTest {
     private lateinit var keepScreenOn: MutableStateFlow<Boolean>
     private lateinit var materialModeOn: MutableStateFlow<Boolean>
     private lateinit var restTimerSoundOn: MutableStateFlow<Boolean>
-    private lateinit var isSupporter: MutableStateFlow<Boolean>
     private lateinit var isWorkoutHeaderSticky: MutableStateFlow<Boolean>
     private lateinit var useScrollWheelForInput: MutableStateFlow<Boolean>
     private lateinit var dismissScrollWheelAutomatically: MutableStateFlow<Boolean>
@@ -59,7 +58,6 @@ class SettingsScreenViewModelTest {
         keepScreenOn = MutableStateFlow(true)
         materialModeOn = MutableStateFlow(false)
         restTimerSoundOn = MutableStateFlow(true)
-        isSupporter = MutableStateFlow(false)
         isWorkoutHeaderSticky = MutableStateFlow(true)
         useScrollWheelForInput = MutableStateFlow(true)
         dismissScrollWheelAutomatically = MutableStateFlow(false)
@@ -72,7 +70,6 @@ class SettingsScreenViewModelTest {
         every { userPreferencesRepository.workoutScreenOn } returns keepScreenOn
         every { userPreferencesRepository.materialMode } returns materialModeOn
         every { userPreferencesRepository.restTimerSoundOn } returns restTimerSoundOn
-        every { userPreferencesRepository.isSupporter } returns isSupporter
         every { userPreferencesRepository.isWorkoutHeaderSticky } returns isWorkoutHeaderSticky
         every { userPreferencesRepository.useScrollWheelForInput } returns useScrollWheelForInput
         every { userPreferencesRepository.dismissScrollWheelInputAutomatically } returns dismissScrollWheelAutomatically
@@ -93,9 +90,6 @@ class SettingsScreenViewModelTest {
         }
         coEvery { userPreferencesRepository.saveRestTimerSoundOn(any()) } answers {
             restTimerSoundOn.value = firstArg()
-        }
-        coEvery { userPreferencesRepository.saveIsSupporter(any()) } answers {
-            isSupporter.value = firstArg()
         }
         coEvery { userPreferencesRepository.saveIsWorkoutHeaderSticky(any()) } answers {
             isWorkoutHeaderSticky.value = firstArg()
@@ -137,11 +131,6 @@ class SettingsScreenViewModelTest {
     @Test
     fun `initial state - rest timer is is on`() = runTest {
         assertThat(viewModel.restTimerSoundOn.value).isTrue()
-    }
-
-    @Test
-    fun `initial state - is supporter is is false`() = runTest {
-        assertThat(viewModel.isSupporter.value).isFalse()
     }
 
     @Test

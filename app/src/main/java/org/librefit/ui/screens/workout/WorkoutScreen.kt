@@ -556,7 +556,6 @@ private fun WorkoutScreenPreview() {
             exercise = UiExercise(setMode = SetMode.DURATION, restTime = 0, notes="Easy pace just to warm up"),
             exerciseDC = UiExerciseDC(
                 name = "Running, Treadmill",
-                images = persistentListOf("Running_Treadmill/0.webp"),
                 equipment = Equipment.OTHER,
                 category = Category.CARDIO
             ),
@@ -570,7 +569,6 @@ private fun WorkoutScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Barbell Bench Press - Medium Grip",
-                images = persistentListOf("Barbell_Bench_Press_-_Medium_Grip/0.webp"),
                 equipment = Equipment.MACHINE,
                 category = Category.STRENGTH
             ),
@@ -587,7 +585,6 @@ private fun WorkoutScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Pushups",
-                images = persistentListOf("Pushups/0.webp"),
                 equipment = Equipment.BODY_ONLY,
                 category = Category.STRENGTH
             ),
@@ -604,7 +601,6 @@ private fun WorkoutScreenPreview() {
             ),
             exerciseDC = UiExerciseDC(
                 name = "Chest And Front Of Shoulder Stretch",
-                images = persistentListOf("Chest_And_Front_Of_Shoulder_Stretch/0.webp"),
                 equipment = Equipment.BODY_ONLY,
                 category = Category.STRETCHING
             ),

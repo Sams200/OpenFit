@@ -35,7 +35,6 @@ import org.librefit.nav.Route
 import org.librefit.ui.components.GetAppNameInAnnotatedBuilder
 import org.librefit.ui.components.LibreFitScaffold
 import org.librefit.ui.screens.home.HomeScreen
-import org.librefit.ui.screens.library.LibraryScreen
 import org.librefit.ui.screens.profile.ProfileScreen
 
 
@@ -74,16 +73,12 @@ fun SharedTransitionScope.MainScreen(
             GetAppNameInAnnotatedBuilder(MaterialTheme.typography.titleLargeEmphasized)
         },
         actions = persistentListOf(
-            { navController.navigate(Route.SupportScreen()) { launchSingleTop = true } },
-            { navController.navigate(Route.AboutScreen) { launchSingleTop = true } },
             { navController.navigate(Route.SettingsScreen) { launchSingleTop = true } }
         ),
         actionsIcons = persistentListOf(
-            painterResource(R.drawable.ic_favorite),
-            painterResource(R.drawable.ic_info),
             painterResource(R.drawable.ic_settings)
         ),
-        actionsElevated = persistentListOf(true, false, false),
+        actionsElevated = persistentListOf(false),
         fabAction = if (pagerState.currentPage == MainScreenPages.HOME.ordinal) fabAction else null,
         fabIcon = painterResource(R.drawable.ic_add),
         fabDescription = stringResource(R.string.create_routine),
@@ -98,14 +93,12 @@ fun SharedTransitionScope.MainScreen(
                             Icon(
                                 painter = painterResource(
                                     id = when (page) {
-                                        MainScreenPages.LIBRARY -> R.drawable.ic_library
                                         MainScreenPages.HOME -> R.drawable.ic_home
                                         MainScreenPages.PROFILE -> R.drawable.ic_person
                                     }
                                 ),
                                 contentDescription = stringResource(
                                     id = when (page) {
-                                        MainScreenPages.LIBRARY -> R.string.library
                                         MainScreenPages.HOME -> R.string.home
                                         MainScreenPages.PROFILE -> R.string.profile
                                     }
@@ -116,7 +109,6 @@ fun SharedTransitionScope.MainScreen(
                             Text(
                                 text = stringResource(
                                     id = when (page) {
-                                        MainScreenPages.LIBRARY -> R.string.library
                                         MainScreenPages.HOME -> R.string.home
                                         MainScreenPages.PROFILE -> R.string.profile
                                     }
@@ -134,9 +126,8 @@ fun SharedTransitionScope.MainScreen(
             contentPadding = innerPadding
         ) { pageIndex ->
             when (pageIndex) {
-                0 -> LibraryScreen()
-                1 -> HomeScreen(navController, animatedVisibilityScope)
-                2 -> ProfileScreen(navController, animatedVisibilityScope)
+                0 -> HomeScreen(navController, animatedVisibilityScope)
+                1 -> ProfileScreen(navController, animatedVisibilityScope)
                 else -> error("Invalid page index in main screen: $pageIndex. Number of pages: ${pagerState.pageCount}")
             }
         }

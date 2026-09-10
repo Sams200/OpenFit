@@ -40,8 +40,6 @@ class ExercisesScreenViewModelTest {
     // A controllable flow to simulate repository emissions
     private lateinit var datasetFlow: MutableStateFlow<List<UiExerciseDC>>
 
-    private lateinit var isSupporterFlow: MutableStateFlow<Boolean>
-
     private lateinit var showExercisesImages: MutableStateFlow<Boolean?>
 
     // Test dataset
@@ -60,12 +58,10 @@ class ExercisesScreenViewModelTest {
         datasetFlow = MutableStateFlow(dataset)
 
         userPreferencesRepository = mockk()
-        isSupporterFlow = MutableStateFlow(false)
         showExercisesImages = MutableStateFlow(null)
 
         // Arrange: Tell the mock what to return when a variable is accessed
         every { datasetRepository.dataset } returns datasetFlow
-        every { userPreferencesRepository.isSupporter } returns isSupporterFlow
         every { userPreferencesRepository.showExercisesImages } returns showExercisesImages
 
         // Instantiate the ViewModel directly, passing in test data

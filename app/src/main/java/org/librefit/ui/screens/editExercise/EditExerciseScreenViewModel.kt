@@ -119,12 +119,6 @@ class EditExerciseScreenViewModel @Inject constructor(
         }
     }
 
-    fun updateInstructions(newInstructions: String) {
-        _exerciseDC.update {
-            it.copy(instructions = persistentListOf(newInstructions))
-        }
-    }
-
     fun updateName(newName: String) {
         _exerciseDC.update { it.copy(name = newName) }
     }

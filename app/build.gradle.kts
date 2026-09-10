@@ -63,6 +63,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("debug")
             // Disable VCS Info (AGP 8.3+).
             // If the git repo isn't perfectly clean, this injects diffs
             vcsInfo.include = false

@@ -79,7 +79,6 @@ import org.librefit.util.Formatter.formatTime
 fun SharedTransitionScope.ExerciseCardSmall(
     exerciseWithSets: UiExerciseWithSets,
     isRoutine: Boolean = false,
-    showExercisesImages: Boolean?,
     animatedVisibilityScope: AnimatedVisibilityScope,
     onDetail: () -> Unit
 ) {
@@ -102,27 +101,6 @@ fun SharedTransitionScope.ExerciseCardSmall(
             Row(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                val model =
-                    remember(exerciseWithSets.exerciseDC.images) { exerciseWithSets.exerciseDC.images.firstOrNull() }
-                if (showExercisesImages == true) {
-                    AsyncImage(
-                        model = model?.let { "file:///android_asset/${it}" },
-                        fallback = painterResource(R.drawable.no_image),
-                        contentDescription = exerciseWithSets.exerciseDC.name,
-                        contentScale = ContentScale.Crop,
-                        colorFilter = if (model == null) ColorFilter.tint(MaterialTheme.colorScheme.onSurfaceVariant) else null,
-                        modifier = Modifier
-                            .padding(end = 10.dp)
-                            .sharedElement(
-                                sharedContentState = rememberSharedContentState(
-                                    key = exerciseWithSets.exercise.id.toString() + exerciseWithSets.exerciseDC.id
-                                ),
-                                animatedVisibilityScope = animatedVisibilityScope
-                            )
-                            .size(50.dp)
-                            .clip(MaterialTheme.shapes.medium)
-                    )
-                }
                 Text(
                     modifier = Modifier.weight(1f),
                     text = exerciseWithSets.exerciseDC.name,
@@ -267,34 +245,6 @@ fun SharedTransitionScope.ExerciseCardSmall(
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalSharedTransitionApi::class)
-@Preview
-@Composable
-private fun ExerciseCardSmallPreview() {
-    LibreFitTheme(dynamicColor = false, themeMode = ThemeMode.DARK) {
-        SharedTransitionLayout {
-            AnimatedVisibility(visible = true) {
-                ExerciseCardSmall(
-                    exerciseWithSets = UiExerciseWithSets(
-                        exercise = UiExercise(
-                            notes = "Notes",
-                            restTime = 100,
-                            setMode = SetMode.BODYWEIGHT
-                        ),
-                        exerciseDC = UiExerciseDC(
-                            name = "Name exercise long long long long",
-                            images = persistentListOf("3_4_Sit-Up/0.jpg")
-                        ),
-                        sets = persistentListOf(UiSet(completed = true), UiSet(reps = 10), UiSet())
-                    ),
-                    showExercisesImages = null,
-                    animatedVisibilityScope = this
-                ) { }
             }
         }
     }

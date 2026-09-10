@@ -31,7 +31,6 @@ class SharedViewModelTest {
     // Controllable flow to simulate repository emission
     private lateinit var showWelcomeScreen: MutableStateFlow<Boolean>
     private lateinit var requestPermissionNextTime: MutableStateFlow<Boolean>
-    private lateinit var isSupporter: MutableStateFlow<Boolean>
     private lateinit var unitSystem: MutableStateFlow<UnitSystem>
 
     @Before
@@ -40,13 +39,11 @@ class SharedViewModelTest {
         userPreferencesRepository = mockk()
         showWelcomeScreen = MutableStateFlow(true)
         requestPermissionNextTime = MutableStateFlow(true)
-        isSupporter = MutableStateFlow(false)
         unitSystem = MutableStateFlow(UnitSystem.METRIC)
 
         // Arrange: Tell the mock what to return when these are accessed
         every { userPreferencesRepository.showWelcomeScreen } returns showWelcomeScreen
         every { userPreferencesRepository.requestPermissionsNextTime } returns requestPermissionNextTime
-        every { userPreferencesRepository.isSupporter } returns isSupporter
         every { userPreferencesRepository.unitSystem } returns unitSystem
 
         coEvery { userPreferencesRepository.saveShowWelcomeScreen(any()) } answers {
@@ -54,9 +51,6 @@ class SharedViewModelTest {
         }
         coEvery { userPreferencesRepository.saveRequestPermissionsNextTime(any()) } answers {
             requestPermissionNextTime.value = firstArg()
-        }
-        coEvery { userPreferencesRepository.saveIsSupporter(any()) } answers {
-            isSupporter.value = firstArg()
         }
 
         // Arrange: Create the ViewModel instance with the mock repository
@@ -82,10 +76,6 @@ class SharedViewModelTest {
         assertThat(viewModel.requestPermissionNextTime.value).isTrue()
     }
 
-    @Test
-    fun `initial state - is supporter is false`() = runTest {
-        assertThat(viewModel.isSupporter.value).isFalse()
-    }
 
     @Test
     fun getSelectedExercisesList() {
@@ -132,20 +122,6 @@ class SharedViewModelTest {
 
             // Assert: update is correct
             assertThat(awaitItem()).isFalse()
-        }
-    }
-
-    @Test
-    fun `is supporter updates correctly`() = runTest {
-        viewModel.isSupporter.test {
-            // Initial emission
-            assertThat(awaitItem()).isFalse()
-
-            // Act: update preference
-            viewModel.updateIsSupporter(true)
-
-            // Assert: update is correct
-            assertThat(awaitItem()).isTrue()
         }
     }
 }

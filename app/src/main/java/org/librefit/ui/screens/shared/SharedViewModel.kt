@@ -58,17 +58,5 @@ class SharedViewModel @Inject constructor(
     }
 
 
-    // Used by SupporterScreen
-    val isSupporter: StateFlow<Boolean> = userPreferencesRepository.isSupporter
-
-    fun updateIsSupporter(value: Boolean) {
-        viewModelScope.launch {
-            // A delay to le the user visualize the successful result
-            delay(1000.milliseconds)
-            userPreferencesRepository.saveIsSupporter(value)
-        }
-    }
-
-
     val unitSystem = userPreferencesRepository.unitSystem
 }

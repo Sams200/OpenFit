@@ -125,8 +125,6 @@ fun SharedTransitionScope.HomeScreen(
         }
     }
 
-    val showKeepAndroidOpen by viewModel.showKeepAndroidOpen.collectAsStateWithLifecycle()
-
     val requestPermissionNextTime by viewModel.requestPermissionNextTime.collectAsStateWithLifecycle()
 
     val routines by viewModel.routines.collectAsStateWithLifecycle()
@@ -139,7 +137,7 @@ fun SharedTransitionScope.HomeScreen(
         routines = routines,
         animatedVisibilityScope = animatedVisibilityScope,
         deleteRunningWorkout = viewModel::deleteRunningWorkout,
-        showKeepAndroidOpen = showKeepAndroidOpen,
+        showKeepAndroidOpen = false,
         onKeepAndroidOpenCheckboxChange = viewModel::saveKeepOpenAndroidCheckbox,
         navigateToRoutine = { workoutId ->
             val requestPermission = !hasNotificationPermission && requestPermissionNextTime
@@ -413,11 +411,9 @@ fun HomeScreenPreview() {
             },
             actions = persistentListOf({ }, { }, { }),
             actionsIcons = persistentListOf(
-                painterResource(R.drawable.ic_favorite),
-                painterResource(R.drawable.ic_info),
                 painterResource(R.drawable.ic_settings)
             ),
-            actionsElevated = persistentListOf(true, false, false),
+            actionsElevated = persistentListOf(false),
             fabAction = {},
             fabIcon = painterResource(R.drawable.ic_add),
             fabText = stringResource(R.string.create_routine),
@@ -431,14 +427,12 @@ fun HomeScreenPreview() {
                                 Icon(
                                     painter = painterResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.drawable.ic_library
                                             MainScreenPages.HOME -> R.drawable.ic_home
                                             MainScreenPages.PROFILE -> R.drawable.ic_person
                                         }
                                     ),
                                     contentDescription = stringResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.string.library
                                             MainScreenPages.HOME -> R.string.home
                                             MainScreenPages.PROFILE -> R.string.profile
                                         }
@@ -449,7 +443,6 @@ fun HomeScreenPreview() {
                                 Text(
                                     text = stringResource(
                                         id = when (page) {
-                                            MainScreenPages.LIBRARY -> R.string.library
                                             MainScreenPages.HOME -> R.string.home
                                             MainScreenPages.PROFILE -> R.string.profile
                                         }

@@ -125,7 +125,4 @@ class ExercisesScreenViewModel @Inject constructor(
             }
         }
     }
-
-
-    val isSupporter: StateFlow<Boolean> = userPreferencesRepository.isSupporter
 }

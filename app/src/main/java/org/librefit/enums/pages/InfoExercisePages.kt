@@ -10,6 +10,5 @@ package org.librefit.enums.pages
 
 enum class InfoExercisePages {
     DETAILS,
-    INSTRUCTIONS,
     HISTORY
 }
