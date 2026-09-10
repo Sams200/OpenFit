@@ -1,19 +1,19 @@
 <div align="center">
 
-<img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="LibreFit's graphic">
+<img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="OpenFit's graphic">
 
-# LibreFit - The free and private workout tracker
+# OpenFit - The free and private workout tracker
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/LibreFitOrg/LibreFit/total?style=for-the-badge&logo=github&labelColor=20232A&color=82D3E3)](https://tooomm.github.io/github-release-stats/?username=LibreFitOrg&repository=LibreFit)
-[![F-droid Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fkitswas%2Ffdroid-metrics-dashboard%2Fraw%2Frefs%2Fheads%2Fmain%2Fprocessed%2Ftotal%2Forg.librefit.app.json&query=%24.total_downloads&style=for-the-badge&label=Downloads&logo=fdroid&labelColor=20232A&color=82D3E3)](https://f-droid.org/packages/org.librefit.app)
-![GitHub Stars](https://img.shields.io/github/stars/LibreFitOrg/LibreFit?style=for-the-badge&logo=github&logoColor=white&labelColor=20232A&color=82D3E3)
-[![GitHub Release](https://img.shields.io/github/v/release/LibreFitOrg/LibreFit?style=for-the-badge&labelColor=20232A&color=82D3E3)](https://github.com/LibreFitOrg/LibreFit/releases)
-[![Codeberg Mirror](https://img.shields.io/badge/Codeberg-Mirror-black?style=for-the-badge&logo=codeberg&labelColor=20232A&color=82D3E3)](https://codeberg.org/LibreFitOrg/LibreFit)
-[![Codeberg Stars](https://img.shields.io/gitea/stars/LibreFitOrg/LibreFit?gitea_url=https%3A%2F%2Fcodeberg.org%2F&style=for-the-badge&logo=codeberg&labelColor=20232A&color=82D3E3)](https://codeberg.org/LibreFitOrg/LibreFit/stars)
-[![License](https://img.shields.io/github/license/LibreFitOrg/LibreFit?style=for-the-badge&labelColor=20232A&color=82D3E3)](https://github.com/LibreFitOrg/LibreFit/blob/main/COPYING)
-[![CI Status](https://img.shields.io/github/actions/workflow/status/LibreFitOrg/LibreFit/android-ci.yml?style=for-the-badge&labelColor=20232A&logo=github&logoColor=white)](https://github.com/LibreFitOrg/LibreFit/actions)
+[![GitHub Downloads](https://img.shields.io/github/downloads/OpenFitOrg/OpenFit/total?style=for-the-badge&logo=github&labelColor=20232A&color=82D3E3)](https://tooomm.github.io/github-release-stats/?username=OpenFitOrg&repository=OpenFit)
+[![F-droid Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fkitswas%2Ffdroid-metrics-dashboard%2Fraw%2Frefs%2Fheads%2Fmain%2Fprocessed%2Ftotal%2Forg.openfit.app.json&query=%24.total_downloads&style=for-the-badge&label=Downloads&logo=fdroid&labelColor=20232A&color=82D3E3)](https://f-droid.org/packages/org.openfit.app)
+![GitHub Stars](https://img.shields.io/github/stars/OpenFitOrg/OpenFit?style=for-the-badge&logo=github&logoColor=white&labelColor=20232A&color=82D3E3)
+[![GitHub Release](https://img.shields.io/github/v/release/OpenFitOrg/OpenFit?style=for-the-badge&labelColor=20232A&color=82D3E3)](https://github.com/OpenFitOrg/OpenFit/releases)
+[![Codeberg Mirror](https://img.shields.io/badge/Codeberg-Mirror-black?style=for-the-badge&logo=codeberg&labelColor=20232A&color=82D3E3)](https://codeberg.org/OpenFitOrg/OpenFit)
+[![Codeberg Stars](https://img.shields.io/gitea/stars/OpenFitOrg/OpenFit?gitea_url=https%3A%2F%2Fcodeberg.org%2F&style=for-the-badge&logo=codeberg&labelColor=20232A&color=82D3E3)](https://codeberg.org/OpenFitOrg/OpenFit/stars)
+[![License](https://img.shields.io/github/license/OpenFitOrg/OpenFit?style=for-the-badge&labelColor=20232A&color=82D3E3)](https://github.com/OpenFitOrg/OpenFit/blob/main/COPYING)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/OpenFitOrg/OpenFit/android-ci.yml?style=for-the-badge&labelColor=20232A&logo=github&logoColor=white)](https://github.com/OpenFitOrg/OpenFit/actions)
 
-LibreFit is a **free** and **open-source** _workout tracker_ designed with **privacy** in mind.
+OpenFit is a **free** and **open-source** _workout tracker_ designed with **privacy** in mind.
 
 Create fully **personalized workouts** using a **rich dataset** of hundreds of exercises—each paired with *images* and step-by-step *instructions* for
 setup and execution.
@@ -33,13 +33,13 @@ During workouts, **track** every set, rep, rest interval, and load in **real tim
 - 💡 [Motivation](README.md#-motivation)
 - 🚀 [Features](README.md#-features)
 - 📥 [Install](README.md#-install)
-- 🤝 [Let's Build LibreFit Together](README.md#-lets-build-librefit-together)
+- 🤝 [Let's Build OpenFit Together](README.md#-lets-build-openfit-together)
     - 💖 [Donate](README.md#-donate)
     - 🏗️ [Contribute to the source code](README.md#-contribute-to-source-code)
     - 🌐 [Translate](CONTRIBUTING.md#translations)
   - 🏋 [Improve exercises' dataset](README.md#-improve-the-exercise-dataset)
 - ❓ [I Have A Question](README.md#-i-have-a-question)
-- ⚡ [Building LibreFit from source](README.md#-building-librefit-from-source)
+- ⚡ [Building OpenFit from source](README.md#-building-openfit-from-source)
 - 📜 [License](README.md#-license)
     - ™️ [Branding](README.md#-branding)
     - 📷 [Images](README.md#-images)
@@ -47,13 +47,13 @@ During workouts, **track** every set, rep, rest interval, and load in **real tim
 
 ## 💡 Motivation
 
-Hey, I'm [IamDg](https://github.com/IamDg), the **creator** of LibreFit. Here is why I started building this project:
+Hey, I'm [IamDg](https://github.com/IamDg), the **creator** of OpenFit. Here is why I started building this project:
 
-LibreFit is a passion project, built by one person who believes **software** should be **open**, **simple**, **beautiful**, and above all, **respectful of your privacy**.
+OpenFit is a passion project, built by one person who believes **software** should be **open**, **simple**, **beautiful**, and above all, **respectful of your privacy**.
 
 I pour countless hours into designing, coding, and refining every detail to create the best possible experience. It's a commitment to you, the user, and to a **better digital world**.
 
-LibreFit is only possible with your [support](README.md#-lets-build-librefit-together).
+OpenFit is only possible with your [support](README.md#-lets-build-openfit-together).
 
 ## 🚀 Features
 
@@ -71,16 +71,16 @@ LibreFit is only possible with your [support](README.md#-lets-build-librefit-tog
 
 ## 📥 Install
 
-Currently, you can download LibreFit from:
+Currently, you can download OpenFit from:
 
-[<img src="assets/badge-fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/org.librefit.app)
-[<img src="assets/badge-obtainium.png" alt="Get it on Obtainium" height="80">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22org.librefit.app%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FLibreFitOrg%2FLibreFit%22%2C%22author%22%3A%22LibreFitOrg%22%2C%22name%22%3A%22LibreFit%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Afalse%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Atrue%2C%5C%22sortMethodChoice%5C%22%3A%5C%22date%5C%22%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22releaseTitleAsVersion%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22-unsigned%5C%22%2C%5C%22invertAPKFilter%5C%22%3Atrue%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22appName%5C%22%3A%5C%22%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22%5C%22%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22allowInsecure%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%2C%5C%22about%5C%22%3A%5C%22%5C%22%2C%5C%22refreshBeforeDownload%5C%22%3Afalse%2C%5C%22includeZips%5C%22%3Afalse%2C%5C%22zippedApkFilterRegEx%5C%22%3A%5C%22%5C%22%7D%22%2C%22overrideSource%22%3A%22GitHub%22%7D)
-[<img src="assets/badge-openapk.png" alt="Get it on OpenApk" height="80">](https://www.openapk.net/librefit/org.librefit.app/)
-[<img src="assets/badge-github.png" alt="Get it on GitHub" height="80">](https://github.com/LibreFitOrg/LibreFit/releases/latest/download/LibreFit.apk)
+[<img src="assets/badge-fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/org.openfit.app)
+[<img src="assets/badge-obtainium.png" alt="Get it on Obtainium" height="80">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22org.openfit.app%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FOpenFitOrg%2FOpenFit%22%2C%22author%22%3A%22OpenFitOrg%22%2C%22name%22%3A%22OpenFit%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Afalse%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Atrue%2C%5C%22sortMethodChoice%5C%22%3A%5C%22date%5C%22%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22releaseTitleAsVersion%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22-unsigned%5C%22%2C%5C%22invertAPKFilter%5C%22%3Atrue%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22appName%5C%22%3A%5C%22%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22%5C%22%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22allowInsecure%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%2C%5C%22about%5C%22%3A%5C%22%5C%22%2C%5C%22refreshBeforeDownload%5C%22%3Afalse%2C%5C%22includeZips%5C%22%3Afalse%2C%5C%22zippedApkFilterRegEx%5C%22%3A%5C%22%5C%22%7D%22%2C%22overrideSource%22%3A%22GitHub%22%7D)
+[<img src="assets/badge-openapk.png" alt="Get it on OpenApk" height="80">](https://www.openapk.net/openfit/org.openfit.app/)
+[<img src="assets/badge-github.png" alt="Get it on GitHub" height="80">](https://github.com/OpenFitOrg/OpenFit/releases/latest/download/OpenFit.apk)
 
-## 🤝 Let's Build LibreFit Together
+## 🤝 Let's Build OpenFit Together
 
-Thank you for considering improving LibreFit!
+Thank you for considering improving OpenFit!
 
 You can actively contribute to the project and become a **supporter** in one of the following ways:
 
@@ -90,14 +90,14 @@ You can actively contribute to the project and become a **supporter** in one of 
 - 🏋️ [Improvements to the exercise dataset](README.md#-improve-the-exercise-dataset)
 
 Every **supporter** (whether a donor, contributor, or translator) will be _credited_ in the about page of the app and in
-[credits section](README.md#-credits). As a token of our appreciation, supporters can request the supporter version of LibreFit
-[here](https://librefit.org/donate), which includes:
+[credits section](README.md#-credits). As a token of our appreciation, supporters can request the supporter version of OpenFit
+[here](https://openfit.org/donate), which includes:
 
 - 📝 **Custom exercises**: The ability to create and use your own custom exercises.
 - 🎨 **Material You**: A theme that automatically matches your system wallpaper colors.
 
 > These additions are our way of giving back to those who help the project. They provide extra personalization and flexibility, while
-> the core LibreFit experience remains fully featured for everyone.
+> the core OpenFit experience remains fully featured for everyone.
 
 ### 💖 Donate
 
@@ -106,7 +106,7 @@ Donations are the main way to:
 - **Cover costs** (e.g. domain, paid plans for emails, etc.).
 - **Thank and incentivize the creator** to invest more time in the project.
 
-To donate, you can either send to the Monero address below or visit the [donation page](https://librefit.org/donate).
+To donate, you can either send to the Monero address below or visit the [donation page](https://openfit.org/donate).
 
 ```text
 842RPDZ851EitDZZxCEp1sjjyDpsaV74xAJBTPU6X7TrDAbpDrjq5rRfaF3Q8PnXyQeUYs2xLoxFpZb7ZpSJxBvdDgFVpww
@@ -114,21 +114,21 @@ To donate, you can either send to the Monero address below or visit the [donatio
 
 > [!IMPORTANT]
 > If you would like the **supporter version**, please ensure you donate using the **integrated processor** on the
-> [donation page](https://librefit.org/donate)
+> [donation page](https://openfit.org/donate)
 
 ### 🏗 Contribute to source code
 
 See [Contributing to source code](CONTRIBUTING.md#your-first-code-contribution)
 
-You can also follow the development on [Codeberg mirror](https://codeberg.org/LibreFitOrg/LibreFit).
+You can also follow the development on [Codeberg mirror](https://codeberg.org/OpenFitOrg/OpenFit).
 
 ### 🌐 Translations
 
 See [Contributing to translations](CONTRIBUTING.md#translations) to discover how to contribute.
 
-[![Translation status](https://hosted.weblate.org/widget/librefit/librefit/matrix-auto.svg)](https://hosted.weblate.org/engage/librefit/)
+[![Translation status](https://hosted.weblate.org/widget/openfit/openfit/matrix-auto.svg)](https://hosted.weblate.org/engage/openfit/)
 
-> Thanks to [Weblate](https://weblate.org) for hosting the LibreFit's translations!
+> Thanks to [Weblate](https://weblate.org) for hosting the OpenFit's translations!
 
 ### 🏋 Improve the exercise dataset
 
@@ -137,24 +137,24 @@ See [Contributing to exercises' dataset](CONTRIBUTING.md#improving-exercises-dat
 ## ❓ I Have a Question
 
 Before you ask a question, it is best to search for
-existing [Discussions](https://github.com/LibreFitOrg/LibreFit/discussions)
-and [Issues](https://github.com/LibreFitOrg/LibreFit/issues) that might help you.
+existing [Discussions](https://github.com/OpenFitOrg/OpenFit/discussions)
+and [Issues](https://github.com/OpenFitOrg/OpenFit/issues) that might help you.
 
 If you then still feel the need to ask a question and need clarification, we recommend the
 following:
 
-- Open a [Discussion](https://github.com/LibreFitOrg/LibreFit/discussions/new).
+- Open a [Discussion](https://github.com/OpenFitOrg/OpenFit/discussions/new).
 - Join our [Simplex Group](https://smp8.simplex.im/g#8i6S-FJPVTn_DqIBBqQcTarcVgkaMqUP6a3piCqpnLA).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions, depending on what seems relevant.
 
 We will then take care of the question as soon as possible.
 
-## ⚡ Building LibreFit from source
+## ⚡ Building OpenFit from source
 
 1. **Clone** the project locally (or download source code as `.zip` file):
     ```bash
-    git clone https://github.com/LibreFitOrg/LibreFit.git
+    git clone https://github.com/OpenFitOrg/OpenFit.git
     ```
 2. **Open in Android Studio:**  Open Android Studio and select _"Open an existing Android Studio
    project"_, pointing to the cloned/downloaded directory.
@@ -170,20 +170,20 @@ We will then take care of the question as soon as possible.
 
 ## 📜 License
 
-LibreFit is licensed under the [GNU General Public License v3.0 or later (GPL v3.0 or later)](COPYING), and it is subject to these [additional terms](ADDITIONAL_TERMS.md).
+OpenFit is licensed under the [GNU General Public License v3.0 or later (GPL v3.0 or later)](COPYING), and it is subject to these [additional terms](ADDITIONAL_TERMS.md).
 
 In short, this means you are free to use, modify, and distribute the code, but you must:
 
 - **Share your changes**: If you distribute a modified version, you must also license it under the
   GPLv3.
-- **Give credit:** Keep the original copyright notice and attribute the original work to LibreFit.
+- **Give credit:** Keep the original copyright notice and attribute the original work to OpenFit.
 - **Mark your changes:** Clearly indicate that your version is a modification of the original.
-- **Do not use the brand:** You cannot use the name "LibreFit" or its logo to promote your modified
+- **Do not use the brand:** You cannot use the name "OpenFit" or its logo to promote your modified
   version.
 
 ### ™️ Branding
 
-The "LibreFit" name and logos are trademarks. **All Rights Reserved**.
+The "OpenFit" name and logos are trademarks. **All Rights Reserved**.
 
 Their use is governed by the [Trademark Policy](TRADEMARK_POLICY.md) which applies to relevant files located in
 `assets` and `app/src/main/res`.
@@ -202,7 +202,7 @@ They are continuously reviewed and regenerated in order to improve their quality
 
 Thanks to everyone who helped the project!
 
-<img src="https://contrib.rocks/image?repo=LibreFitOrg/LibreFit"/>
+<img src="https://contrib.rocks/image?repo=OpenFitOrg/OpenFit"/>
 
 ### 💖 Donators
 
@@ -216,15 +216,15 @@ Thanks to everyone who helped the project!
 
 ### 🏗 Contributors
 
-- [dpusceddu](https://github.com/dpusceddu) : [#25](https://github.com/LibreFitOrg/LibreFit/pull/25)
-- [VanemKrAu](https://github.com/VanemKrAu) : [#163](https://github.com/LibreFitOrg/LibreFit/pull/163)
+- [dpusceddu](https://github.com/dpusceddu) : [#25](https://github.com/OpenFitOrg/OpenFit/pull/25)
+- [VanemKrAu](https://github.com/VanemKrAu) : [#163](https://github.com/OpenFitOrg/OpenFit/pull/163)
 
 > [Contribute to source code](CONTRIBUTING.md#your-first-code-contribution) to be listed here.
 
 ### 🏋 Dataset contributors
 
-- [b3nj5m1n](https://github.com/b3nj5m1n) : [#28](https://github.com/LibreFitOrg/LibreFit/pull/28)
-- [ByYeah](https://github.com/ByYeah) : [#111](https://github.com/LibreFitOrg/LibreFit/pull/111)
+- [b3nj5m1n](https://github.com/b3nj5m1n) : [#28](https://github.com/OpenFitOrg/OpenFit/pull/28)
+- [ByYeah](https://github.com/ByYeah) : [#111](https://github.com/OpenFitOrg/OpenFit/pull/111)
 
 > [Contribute to dataset](CONTRIBUTING.md#improving-exercises-dataset) to be listed here.
 
@@ -234,102 +234,102 @@ Thanks to everyone who helped the project!
 
 #### Arabic 🇸🇦
 
-- [AhmedAwad7](https://github.com/AhmedAwad7) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [b0saleh](https://github.com/b0saleh) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
+- [AhmedAwad7](https://github.com/AhmedAwad7) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [b0saleh](https://github.com/b0saleh) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
 
 #### Brazilian Portuguese 🇧🇷
 
-- [miguelsoaresouza8-droid](https://github.com/miguelsoaresouza8-droid) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- Miles Espadoto [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
-- [vinitdrk](https://github.com/vinitdrk) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [miguelsoaresouza8-droid](https://github.com/miguelsoaresouza8-droid) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- Miles Espadoto [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
+- [vinitdrk](https://github.com/vinitdrk) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Czech 🇨🇿
 
-- Odweta [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
+- Odweta [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
 
 #### Dutch 🇳🇱
 
-- [mwesten](https://github.com/mwesten) [#19](https://github.com/LibreFitOrg/LibreFit/pull/19)
+- [mwesten](https://github.com/mwesten) [#19](https://github.com/OpenFitOrg/OpenFit/pull/19)
 
 #### French 🇫🇷
 
-- [Spartang-117](https://github.com/Spartang-117) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [Semprista](https://github.com/Semprista) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [BigP0tato](https://github.com/B1gP0tato) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [UbioZur](https://github.com/UbioZur) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
-- [malespiaut](https://github.com/malespiaut) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
-- [alexischarp](https://github.com/alexischarp) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [Spartang-117](https://github.com/Spartang-117) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [Semprista](https://github.com/Semprista) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [BigP0tato](https://github.com/B1gP0tato) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [UbioZur](https://github.com/UbioZur) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
+- [malespiaut](https://github.com/malespiaut) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
+- [alexischarp](https://github.com/alexischarp) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### German 🇩🇪
 
 - [doen1el](https://github.com/doen1el)
-- [Robin Schanbacher](https://github.com/RobinS-T470s) [#105](https://github.com/LibreFitOrg/LibreFit/pull/105)
-- [sprivaq](https://github.com/sprivaq) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [mister-bum](https://github.com/mister-bum) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [Jent1357](https://github.com/Jent1357) [#105](https://github.com/LibreFitOrg/LibreFit/pull/105)
-- [zhx000](https://github.com/zhx000) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [Robin Schanbacher](https://github.com/RobinS-T470s) [#105](https://github.com/OpenFitOrg/OpenFit/pull/105)
+- [sprivaq](https://github.com/sprivaq) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [mister-bum](https://github.com/mister-bum) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [Jent1357](https://github.com/Jent1357) [#105](https://github.com/OpenFitOrg/OpenFit/pull/105)
+- [zhx000](https://github.com/zhx000) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Hindi 🇮🇳
 
-- [SilentCoderHere](https://github.com/SilentCoderHere) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [WinnerWind](https://github.com/WinnerWind) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
-- Rajesh Ranmara [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [SilentCoderHere](https://github.com/SilentCoderHere) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [WinnerWind](https://github.com/WinnerWind) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
+- Rajesh Ranmara [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Indonesian 🇮🇩
 
-- [raihankr](https://github.com/raihankr) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
+- [raihankr](https://github.com/raihankr) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
 
 #### Italian 🇮🇹
 
-- [lotation](https://github.com/lotation) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [lotation](https://github.com/lotation) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Korean 🇰🇷
 
-- Jae Hyuk Lee [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
+- Jae Hyuk Lee [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
 
 #### Polish 🇵🇱
 
-- theswordsgame [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
+- theswordsgame [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
 
 #### Portuguese 🇵🇹
 
-- [joncasagrande](https://github.com/joncasagrande) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [joncasagrande](https://github.com/joncasagrande) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Russian 🇷🇺
 
-- [vuichka](https://github.com/vuichka) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
+- [vuichka](https://github.com/vuichka) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
 
 #### Simplified Chinese 🇨🇳
 
-- [kid1412621](https://github.com/kid1412621) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [ylconion](https://github.com/ylconion) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [zei dan](https://github.com/bakamake) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
-- [Ahmedbd23](https://github.com/Ahmedbd23) [#105](https://github.com/LibreFitOrg/LibreFit/pull/105)
+- [kid1412621](https://github.com/kid1412621) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [ylconion](https://github.com/ylconion) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [zei dan](https://github.com/bakamake) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
+- [Ahmedbd23](https://github.com/Ahmedbd23) [#105](https://github.com/OpenFitOrg/OpenFit/pull/105)
 
 #### Spanish 🇪🇸
 
-- [SelwynDO](https://github.com/SelwynDO) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [VA5H-One](https://github.com/VA5H-One) [#83](https://github.com/LibreFitOrg/LibreFit/pull/83)
-- josé m [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [DoubleCheddarBurger](https://github.com/DoubleCheddarBurger) [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
-- [johncorea580-crypto](https://github.com/johncorea580-crypto) [#83](https://github.com/LibreFitOrg/LibreFit/pull/83)
-- [xorodev](https://github.com/xorodev) [#83](https://github.com/LibreFitOrg/LibreFit/pull/83)
-- tomel51733 [#105](https://github.com/LibreFitOrg/LibreFit/pull/105)
-- [hyperion](https://github.com/hyperioncodes) [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [SelwynDO](https://github.com/SelwynDO) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [VA5H-One](https://github.com/VA5H-One) [#83](https://github.com/OpenFitOrg/OpenFit/pull/83)
+- josé m [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [DoubleCheddarBurger](https://github.com/DoubleCheddarBurger) [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
+- [johncorea580-crypto](https://github.com/johncorea580-crypto) [#83](https://github.com/OpenFitOrg/OpenFit/pull/83)
+- [xorodev](https://github.com/xorodev) [#83](https://github.com/OpenFitOrg/OpenFit/pull/83)
+- tomel51733 [#105](https://github.com/OpenFitOrg/OpenFit/pull/105)
+- [hyperion](https://github.com/hyperioncodes) [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Swedish 🇸🇪
 
-- [T-Silverspoon](https://github.com/T-Silverspoon) [#105](https://github.com/LibreFitOrg/LibreFit/pull/105)
-- Jahn Andreas [#143](https://github.com/LibreFitOrg/LibreFit/pull/143)
+- [T-Silverspoon](https://github.com/T-Silverspoon) [#105](https://github.com/OpenFitOrg/OpenFit/pull/105)
+- Jahn Andreas [#143](https://github.com/OpenFitOrg/OpenFit/pull/143)
 
 #### Ukrainian 🇺🇦
 
-- UnknownLi [#32](https://github.com/LibreFitOrg/LibreFit/pull/32)
+- UnknownLi [#32](https://github.com/OpenFitOrg/OpenFit/pull/32)
 
 #### Urdu 🇵🇰
 
-- [Safi Ullah](https://github.com/Safi-Ullah-1060) [#97](https://github.com/LibreFitOrg/LibreFit/pull/97)
+- [Safi Ullah](https://github.com/Safi-Ullah-1060) [#97](https://github.com/OpenFitOrg/OpenFit/pull/97)
 
 ---
 
-Made with ❤️ by [IamDg](https://github.com/IamDg) and [contributors](https://github.com/LibreFitOrg/LibreFit/graphs/contributors)
+Made with ❤️ by [IamDg](https://github.com/IamDg) and [contributors](https://github.com/OpenFitOrg/OpenFit/graphs/contributors)

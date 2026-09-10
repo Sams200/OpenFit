@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ SPDX-License-Identifier: GPL-3.0-or-later
-  ~ Copyright (c) 2024-2026. The LibreFit Contributors
+  ~ Copyright (c) 2024-2026. The OpenFit Contributors
   ~
-  ~ LibreFit is subject to additional terms covering author attribution and trademark usage;
+  ~ OpenFit is subject to additional terms covering author attribution and trademark usage;
   ~ see the ADDITIONAL_TERMS.md and TRADEMARK_POLICY.md files in the project root.
   -->
 
@@ -10,7 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
-        <package android:name="org.librefit.companion" />
+        <package android:name="org.openfit.companion" />
     </queries>
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -27,12 +27,12 @@
         android:name=".MainApplication"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LibreFit"
+        android:theme="@style/Theme.OpenFit"
         tools:targetApi="tiramisu">
         <activity
             android:name=".activities.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.LibreFit.SplashScreen">
+            android:theme="@style/Theme.OpenFit.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -42,7 +42,7 @@
         <activity
             android:name=".activities.ErrorActivity"
             android:exported="true"
-            android:theme="@style/Theme.LibreFit.SplashScreen"
+            android:theme="@style/Theme.OpenFit.SplashScreen"
             android:excludeFromRecents="true"
             android:finishOnTaskLaunch="true"
             android:process=":error_process">

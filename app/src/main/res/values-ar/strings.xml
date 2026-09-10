@@ -10,14 +10,14 @@
     <string name="contributed_to">ساهم في:</string>
     <string name="dependencies">التبعيات</string>
     <string name="about">عن</string>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="profile">الملف الشخصي</string>
     <string name="settings">الإعدادات</string>
-    <string name="privacy_policy_desc">لا يستطيع تطبيق LibreFit الوصول إلى الإنترنت. وهذا يعني أن بيانات المستخدم لا تغادر الجهاز أبداً.</string>
+    <string name="privacy_policy_desc">لا يستطيع تطبيق OpenFit الوصول إلى الإنترنت. وهذا يعني أن بيانات المستخدم لا تغادر الجهاز أبداً.</string>
     <string name="website">الموقع الإلكتروني</string>
     <string name="source_code">الكود المصدري</string>
     <string name="license">التراخيص</string>
-    <string name="license_desc">LibreFit مرخص بموجب رخصة جنو العمومية العامة الإصدار 3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit مرخص بموجب رخصة جنو العمومية العامة الإصدار 3.0 (GPL-3).</string>
     <string name="contributors">المساهمون</string>
     <string name="founder">المؤسس</string>
     <string name="translators">المترجمون</string>

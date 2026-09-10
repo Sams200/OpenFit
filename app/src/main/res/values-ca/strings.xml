@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="home">Inici</string>
     <string name="profile">Perfil</string>
     <string name="settings">Configuració</string>
@@ -16,11 +16,11 @@
     <string name="contribute">Contribuir</string>
     <string name="info">Informació</string>
     <string name="privacy_policy">Política de privacitat</string>
-    <string name="privacy_policy_desc">LibreFit no té accés a Internet. Això vol dir que les dades dels usuaris mai surten del dispositiu.</string>
+    <string name="privacy_policy_desc">OpenFit no té accés a Internet. Això vol dir que les dades dels usuaris mai surten del dispositiu.</string>
     <string name="website">Lloc web</string>
     <string name="source_code">Codi font</string>
     <string name="license">Llicència</string>
-    <string name="license_desc">LibreFit està sota la llicència GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit està sota la llicència GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Contribuidors</string>
     <string name="founder">Fundador</string>
     <string name="translators">Traductors</string>

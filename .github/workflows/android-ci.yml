@@ -74,5 +74,5 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v7
         with:
-          path: app/build/outputs/apk/debug/LibreFit-debug.apk
+          path: app/build/outputs/apk/debug/OpenFit-debug.apk
           archive: false

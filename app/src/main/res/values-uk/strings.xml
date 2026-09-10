@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="home">Головна</string>
     <string name="profile">Профіль</string>
     <string name="settings">Налаштування</string>
@@ -16,11 +16,11 @@
     <string name="contribute">Долучитися</string>
     <string name="info">Довідка</string>
     <string name="privacy_policy">Політика конфіденційності</string>
-    <string name="privacy_policy_desc">LibreFit працює без доступу до мережі, тому ваші дані залишаються виключно на цьому пристрої.</string>
+    <string name="privacy_policy_desc">OpenFit працює без доступу до мережі, тому ваші дані залишаються виключно на цьому пристрої.</string>
     <string name="website">Вебсайт</string>
     <string name="source_code">Вихідний код</string>
     <string name="license">Ліцензія</string>
-    <string name="license_desc">LibreFit ліцензовано згідно з GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit ліцензовано згідно з GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Автори</string>
     <string name="founder">Засновник</string>
     <string name="translators">Перекладачі</string>

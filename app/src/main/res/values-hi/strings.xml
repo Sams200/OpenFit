@@ -15,11 +15,11 @@
     <string name="contribute">योगदान दें</string>
     <string name="info">जानकारी</string>
     <string name="privacy_policy">गोपनीयता नीति</string>
-    <string name="privacy_policy_desc">LibreFit इंटरनेट से कनेक्ट नहीं होता — इसलिए आपका डेटा कभी भी डिवाइस से बाहर नहीं भेजा जाता।</string>
+    <string name="privacy_policy_desc">OpenFit इंटरनेट से कनेक्ट नहीं होता — इसलिए आपका डेटा कभी भी डिवाइस से बाहर नहीं भेजा जाता।</string>
     <string name="website">वेबसाइट</string>
     <string name="source_code">स्रोत कोड</string>
     <string name="license">लाइसेंस</string>
-    <string name="license_desc">LibreFit को GNU जनरल पब्लिक लाइसेंस v3.0 (GPL‑3) के तहत जारी किया गया है।</string>
+    <string name="license_desc">OpenFit को GNU जनरल पब्लिक लाइसेंस v3.0 (GPL‑3) के तहत जारी किया गया है।</string>
     <string name="contributors">योगदानकर्ता</string>
     <string name="founder">संस्थापक</string>
     <string name="translators">अनुवादक</string>

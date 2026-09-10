@@ -1,4 +1,4 @@
-# Contributing to LibreFit
+# Contributing to OpenFit
 
 First off, thanks for taking the time to contribute! ❤️
 
@@ -32,20 +32,20 @@ community looks forward to your contributions. 🎉
 
 This project and everyone participating in it is governed by
 the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
-Please report unacceptable behavior by filling this [form](https://librefit.org/contact).
+Please report unacceptable behavior by filling this [form](https://openfit.org/contact).
 
 ## I Have a Question
 
 Before you ask a question, it is best to search for
-existing [Discussions](https://github.com/LibreFitOrg/LibreFit/discussions)
-and [Issues](https://github.com/LibreFitOrg/LibreFit/issues) that might help you. In case you have
+existing [Discussions](https://github.com/OpenFitOrg/OpenFit/discussions)
+and [Issues](https://github.com/OpenFitOrg/OpenFit/issues) that might help you. In case you have
 found a suitable issue and still need clarification, you can write your question in this discussion.
 It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the
 following:
 
-- Open an [Discussion](https://github.com/LibreFitOrg/LibreFit/discussions/new).
+- Open an [Discussion](https://github.com/OpenFitOrg/OpenFit/discussions/new).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions, depending on what seems relevant.
 
@@ -59,7 +59,7 @@ under the project license.
 
 ### License
 
-By contributing to **LibreFit**, you agree that your contributions will be licensed under the **GNU
+By contributing to **OpenFit**, you agree that your contributions will be licensed under the **GNU
 General Public License v3.0 (GPLv3)**.
 
 ### Reporting Bugs
@@ -77,7 +77,7 @@ possible.
   looking for support, you might want to check [this section](CONTRIBUTING.md#i-have-a-question)).
 - To see if other users have experienced (and potentially already solved) the same issue you are
   having, check if there is not already a bug report existing for your bug or error in
-  the [bug tracker](https://github.com/LibreFitOrg/LibreFit/issues?q=label%3Abug).
+  the [bug tracker](https://github.com/OpenFitOrg/OpenFit/issues?q=label%3Abug).
 - Also make sure to search the internet to see if users outside the GitHub community have
   discussed the issue.
 
@@ -85,11 +85,11 @@ possible.
 
 > You must never report security related issues, vulnerabilities or bugs including sensitive
 > information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent using
-> the [GitHub vulnerability report](https://github.com/LibreFitOrg/LibreFit/security/advisories/new).
+> the [GitHub vulnerability report](https://github.com/OpenFitOrg/OpenFit/security/advisories/new).
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
-- Open an [Issue](https://github.com/LibreFitOrg/LibreFit/issues/new). (Since we can't be sure at
+- Open an [Issue](https://github.com/OpenFitOrg/OpenFit/issues/new). (Since we can't be sure at
   this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the
   issue.)
 - Fill the provided template.
@@ -110,7 +110,7 @@ Once it's filed:
 
 ### Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for LibreFit, **including
+This section guides you through submitting an enhancement suggestion for OpenFit, **including
 completely new features and minor improvements to existing functionality**. Following these
 guidelines will help maintainers and the community to understand your suggestion and find related
 suggestions.
@@ -120,8 +120,8 @@ suggestions.
 - Make sure that you are using the latest version.
 - Read the [README.md](README.md) carefully and find out if the functionality is already covered,
   maybe by an individual configuration.
-- Perform a search in [Existing Issues](https://github.com/LibreFitOrg/LibreFit/issues)
-  and [Existing Discussions](https://github.com/LibreFitOrg/LibreFit/discussions) to see if the
+- Perform a search in [Existing Issues](https://github.com/OpenFitOrg/OpenFit/issues)
+  and [Existing Discussions](https://github.com/OpenFitOrg/OpenFit/discussions) to see if the
   enhancement has already been suggested. If it has, add a comment to the existing issue/discussion
   instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a
@@ -131,7 +131,7 @@ suggestions.
 #### How Do I Submit a Good Enhancement Suggestion?
 
 Enhancement suggestions are tracked
-as [GitHub issues](https://github.com/LibreFitOrg/LibreFit/issues).
+as [GitHub issues](https://github.com/OpenFitOrg/OpenFit/issues).
 
 Fill the provided template. In particular:
 
@@ -142,7 +142,7 @@ Fill the provided template. In particular:
   why. At this point you can also tell which alternatives do not work for you.
 - You may want to **include screenshots or screen recordings** which help you demonstrate the steps
   or point out the part which the suggestion is related to.
-- **Explain why this enhancement would be useful** to most LibreFit users. You may also want to
+- **Explain why this enhancement would be useful** to most OpenFit users. You may also want to
   point out the other projects that solved it better and which could serve as inspiration.
 
 ### Your First Code Contribution
@@ -190,16 +190,16 @@ the latest Android toolkit:
 ### Translations
 
 > [!IMPORTANT]
-> To get the supporter code as Weblate translator, follow procedure in the following page: https://librefit.org/translators/login.
+> To get the supporter code as Weblate translator, follow procedure in the following page: https://openfit.org/translators/login.
 
-We want LibreFit to be accessible to everyone!
+We want OpenFit to be accessible to everyone!
 
-- We use **Weblate** for translations. Join our project here: https://hosted.weblate.org/projects/librefit/librefit/
+- We use **Weblate** for translations. Join our project here: https://hosted.weblate.org/projects/openfit/openfit/
 - Please, **do not blindly accept machine or AI translations** as they do not understand the
-  context. Always double check all translations and their use in LibreFit.
+  context. Always double check all translations and their use in OpenFit.
 - A language will be added once it is **completed at least 80%**.
 
-> Thanks to [Weblate](https://weblate.org) for hosting LibreFit's translations!
+> Thanks to [Weblate](https://weblate.org) for hosting OpenFit's translations!
 
 #### 🗺️ Supported Languages for Translation
 
@@ -293,7 +293,7 @@ When JSON file is correct, validation will pass and script will output:
 > [!IMPORTANT]
 > This check will be executed also by CI in a pull request or push to every change in JSON file or images.
 > If JSON is not ordered, the CI will upload the ordered JSON as artifact.
-> See more [here](https://github.com/LibreFitOrg/LibreFit/blob/main/.github/workflows/validate-exercises-json.yml)
+> See more [here](https://github.com/OpenFitOrg/OpenFit/blob/main/.github/workflows/validate-exercises-json.yml)
 
 #### Pull Request Process
 
@@ -304,7 +304,7 @@ When JSON file is correct, validation will pass and script will output:
 
 > [!NOTE]
 > If you need to add a new category, muscle group, or equipment type, please open
-> a [Discussion](https://github.com/LibreFitOrg/LibreFit/discussions) to ensure it aligns with the
+> a [Discussion](https://github.com/OpenFitOrg/OpenFit/discussions) to ensure it aligns with the
 > project taxonomy before submitting a PR.
 
 ## Attribution

@@ -63,20 +63,20 @@ The local environment must exactly match the Continuous Integration (CI) environ
 
 1. Clone the repository and checkout the specific tag to be verified:
    ```shell
-   git clone https://github.com/LibreFitOrg/LibreFit.git
-   cd LibreFit
+   git clone https://github.com/OpenFitOrg/OpenFit.git
+   cd OpenFit
    git checkout v1.0.0 # The version/tag you want to verify
    ```
 2. Build the unsigned release APK using the exact same command as the CI workflow:
    ```shell
    ./gradlew clean assembleRelease --no-daemon
    ```
-   The locally built unsigned APK will be generated at `app/build/outputs/apk/release/LibreFit-release-unsigned.apk`.
+   The locally built unsigned APK will be generated at `app/build/outputs/apk/release/OpenFit-release-unsigned.apk`.
 
 #### Step 3: Prepare the Release APK
 
-1. Download the official signed APK (e.g., `LibreFit.apk`) from the [GitHub Releases](https://github.com/LibreFitOrg/LibreFit/releases) page
-   or [F-Droid](https://f-droid.org/packages/org.librefit.app/).
+1. Download the official signed APK (e.g., `OpenFit.apk`) from the [GitHub Releases](https://github.com/OpenFitOrg/OpenFit/releases) page
+   or [F-Droid](https://f-droid.org/packages/org.openfit.app/).
 2. Place the downloaded APK in the root of the project directory for easy access.
 
 #### Step 4: Run the Comparison
@@ -84,7 +84,7 @@ The local environment must exactly match the Continuous Integration (CI) environ
 With the virtual environment still activated, run `diffoscope` to compare the developer's signed APK against the locally built unsigned APK:
 
 ```shell
-diffoscope LibreFit.apk app/build/outputs/apk/release/LibreFit-release-unsigned.apk
+diffoscope OpenFit.apk app/build/outputs/apk/release/OpenFit-release-unsigned.apk
 ```
 
 > [!NOTE]
@@ -102,8 +102,8 @@ Upon running the command, `diffoscope` will output a structured diff of the two 
 2. **Missing Files (`-` prefix):** The diff will show exactly three lines prefixed with a minus sign `-`, representing files present in the signed APK
    but absent from the unsigned APK. These will be located in the `META-INF/` directory:
    ```text
-   --rw----     2.0 fat   279672 b- defN 81-Jan-01 01:01 META-INF/LIBREFIT.SF
-   --rw----     2.0 fat     2178 b- defN 81-Jan-01 01:01 META-INF/LIBREFIT.RSA
+   --rw----     2.0 fat   279672 b- defN 81-Jan-01 01:01 META-INF/OPENFIT.SF
+   --rw----     2.0 fat     2178 b- defN 81-Jan-01 01:01 META-INF/OPENFIT.RSA
    --rw----     2.0 fat   279545 b- defN 81-Jan-01 01:01 META-INF/MANIFEST.MF
    ```
 3. **No Unexpected Changes (`+` prefix):** There should be **zero** lines prefixed with a plus sign `+` in the file listing. This proves the unsigned
@@ -125,17 +125,17 @@ Consult the [F-Droid Reproducible Builds Documentation](https://f-droid.org/docs
 non-deterministic build issues.
 
 > [!CAUTION]
-> If issue persists, contact maintainers by either [filling form](https://librefit.org/contact)
-> or [opening a new issue](https://github.com/LibreFitOrg/LibreFit/issues/new/choose)
+> If issue persists, contact maintainers by either [filling form](https://openfit.org/contact)
+> or [opening a new issue](https://github.com/OpenFitOrg/OpenFit/issues/new/choose)
 
 #### Sample Log of Successful Verification
 
 ```shell
-user@host:~/LibreFit$ python3 -m venv .venv
-user@host:~/LibreFit$ source ./.venv/bin/activate
-(.venv) user@host:~/LibreFit$ diffoscope LibreFit.apk LibreFit-release-unsigned.apk
---- LibreFit.apk
-+++ LibreFit-release-unsigned.apk
+user@host:~/OpenFit$ python3 -m venv .venv
+user@host:~/OpenFit$ source ./.venv/bin/activate
+(.venv) user@host:~/OpenFit$ diffoscope OpenFit.apk OpenFit-release-unsigned.apk
+--- OpenFit.apk
++++ OpenFit-release-unsigned.apk
 │┄ 'apksigner' not available in path.
 │┄ 'androguard' Python package not installed; cannot extract V2 signing keys.
 │┄ 'apktool' not available in path. Format-specific differences are supported for Android APK files.
@@ -158,8 +158,8 @@ user@host:~/LibreFit$ source ./.venv/bin/activate
 │  -rw----     0.0 fat      956 b- defN 81-Jan-01 01:01 res/zc.xml
 │  -rw----     0.0 fat      464 b- defN 81-Jan-01 01:01 res/zq.xml
 │  -rw----     0.0 fat   750708 b- stor 81-Jan-01 01:01 resources.arsc
-│ --rw----     2.0 fat   279672 b- defN 81-Jan-01 01:01 META-INF/LIBREFIT.SF
-│ --rw----     2.0 fat     2178 b- defN 81-Jan-01 01:01 META-INF/LIBREFIT.RSA
+│ --rw----     2.0 fat   279672 b- defN 81-Jan-01 01:01 META-INF/OPENFIT.SF
+│ --rw----     2.0 fat     2178 b- defN 81-Jan-01 01:01 META-INF/OPENFIT.RSA
 │ --rw----     2.0 fat   279545 b- defN 81-Jan-01 01:01 META-INF/MANIFEST.MF
 │ -2693 files, 53039928 bytes uncompressed, 40746809 bytes compressed:  23.2%
 │ +2690 files, 52478533 bytes uncompressed, 40529722 bytes compressed:  22.8%

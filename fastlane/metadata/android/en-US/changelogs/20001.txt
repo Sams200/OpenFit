@@ -1,9 +1,9 @@
-⚠️ IMPORTANT: Now you can add your language in LibreFit!
-🔗 https://github.com/LibreFitOrg/LibreFit/blob/main/CONTRIBUTING.md#translations
+⚠️ IMPORTANT: Now you can add your language in OpenFit!
+🔗 https://github.com/OpenFitOrg/OpenFit/blob/main/CONTRIBUTING.md#translations
 
 We are excited to share a new version packed with features to make your workout tracking even smoother!
 
-If LibreFit helped you, please consider starring the repository or supporting the development through donations, contributions or translations — your support keeps the project free and constantly improving for everyone.
+If OpenFit helped you, please consider starring the repository or supporting the development through donations, contributions or translations — your support keeps the project free and constantly improving for everyone.
 
 Thank you for your support!
 

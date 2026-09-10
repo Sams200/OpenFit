@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="profile">Профиль</string>
     <string name="settings">Настройки</string>
     <string name="more_options">Больше опций</string>
@@ -13,11 +13,11 @@
     <string name="contribute">Сотрудничество</string>
     <string name="info">Информация</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
-    <string name="privacy_policy_desc">LibreFit не имеет доступа к интернету. Данные пользователя всегда остаются на устройстве.</string>
+    <string name="privacy_policy_desc">OpenFit не имеет доступа к интернету. Данные пользователя всегда остаются на устройстве.</string>
     <string name="website">Вебсайт</string>
     <string name="source_code">Исходный код</string>
     <string name="license">Лицензия</string>
-    <string name="license_desc">LibreFit лицензирован GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit лицензирован GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Соавторы</string>
     <string name="founder">Основатель</string>
     <string name="translators">Переводчики</string>
@@ -111,7 +111,7 @@
     <string name="start_completing_workout">Начните с завершения тренировки</string>
     <string name="privacy">Приватность</string>
     <string name="privacy_notice">Уведомление о конфиденциальности</string>
-    <string name="privacy_notice_summary">LibreFit обеспечивает **максимальную конфиденциальность**, поскольку он **не имеет доступа к Интернету**. Кроме того, все разрешения являются **необязательными** и не позволяют собирать данные.</string>
+    <string name="privacy_notice_summary">OpenFit обеспечивает **максимальную конфиденциальность**, поскольку он **не имеет доступа к Интернету**. Кроме того, все разрешения являются **необязательными** и не позволяют собирать данные.</string>
     <string name="privacy_notice_optional_perm">Необязательные разрешения</string>
     <string name="privacy_notice_notification_perm">** Уведомления **: Это разрешение позволяет приложению отправлять уведомления о ваших текущих тренировках и оповещения об окончании периодов отдыха.</string>
     <string name="privacy_notice_default_perm">Разрешение предоставлено по умолчанию</string>
@@ -173,8 +173,8 @@
     <string name="exercise_saved">Упражнение сохранено</string>
     <string name="valid_companion_app_signature">Действительное приложение-компаньон</string>
     <string name="invalid_companion_app_signature">Недействительное приложение-компаньон</string>
-    <string name="librefit_app_not_found">LibreFit не найдена</string>
-    <string name="librefit_signature_error">Ошибка в подписи LibreFit</string>
+    <string name="openfit_app_not_found">OpenFit не найдена</string>
+    <string name="openfit_signature_error">Ошибка в подписи OpenFit</string>
     <string name="companion_app_not_found">Сопутствующее приложение не найдено</string>
     <string name="public_key_not_initialized_properly">Открытый ключ не инициализирован должным образом</string>
     <string name="invalid_public_key">Недействительный открытый ключ</string>

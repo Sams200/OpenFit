@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Auto-fill weight inputs with the last saved measurement (defaults to 60 kg) [#164](https://github.com/LibreFitOrg/LibreFit/issues/164)
+- Auto-fill weight inputs with the last saved measurement (defaults to 60 kg) [#164](https://github.com/OpenFitOrg/OpenFit/issues/164)
 
 ### Changed
 
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Crash when switching to chinese languange [#154](https://github.com/LibreFitOrg/LibreFit/issues/154)
+- Crash when switching to chinese languange [#154](https://github.com/OpenFitOrg/OpenFit/issues/154)
 
 ## [0.4.1] - 2026-07-28
 
@@ -33,15 +33,15 @@ This release contains fix for a bug noticed shortly after release v0.4.0. The bu
 
 ### Fixed
 
-- Visual bug in previous set of workout screen [#140](https://github.com/LibreFitOrg/LibreFit/pull/140)
+- Visual bug in previous set of workout screen [#140](https://github.com/OpenFitOrg/OpenFit/pull/140)
 
 ## [0.4.0] - 2026-07-26
 
 ### Added
 
-- Support for imperial system (pounds) [#18](https://github.com/LibreFitOrg/LibreFit/issues/18)
-- Russian 🇷🇺 [#124](https://github.com/LibreFitOrg/LibreFit/pull/124)
-- Add 5 new exercises [#111](https://github.com/LibreFitOrg/LibreFit/pull/111):
+- Support for imperial system (pounds) [#18](https://github.com/OpenFitOrg/OpenFit/issues/18)
+- Russian 🇷🇺 [#124](https://github.com/OpenFitOrg/OpenFit/pull/124)
+- Add 5 new exercises [#111](https://github.com/OpenFitOrg/OpenFit/pull/111):
   - Wall Sit (Isometric squat against the wall)
   - Plank Shoulder Taps
   - Bottom Push-Up Hold
@@ -50,13 +50,13 @@ This release contains fix for a bug noticed shortly after release v0.4.0. The bu
 
 ### Changed
 
-- A new toggle to show images was introduced (off by default). [#29](https://github.com/LibreFitOrg/LibreFit/issues/29)
-- Quicker input for weights with scroll wheel [#74](https://github.com/LibreFitOrg/LibreFit/issues/74)
+- A new toggle to show images was introduced (off by default). [#29](https://github.com/OpenFitOrg/OpenFit/issues/29)
+- Quicker input for weights with scroll wheel [#74](https://github.com/OpenFitOrg/OpenFit/issues/74)
 
 ### Fixed
 
-- Buttons in rest timer notification by refactoring logic [#117](https://github.com/LibreFitOrg/LibreFit/pull/117)
-- Fix language handling and display [#122](https://github.com/LibreFitOrg/LibreFit/pull/122)
+- Buttons in rest timer notification by refactoring logic [#117](https://github.com/OpenFitOrg/OpenFit/pull/117)
+- Fix language handling and display [#122](https://github.com/OpenFitOrg/OpenFit/pull/122)
 
 ## [0.3.1] - 2026-05-31
 
@@ -64,48 +64,48 @@ This is a hotfix for a bug in the weight value of a set: the underlying data wer
 
 ### Fixed
 
-- Visual bug causing weight field to not show current value [#90](https://github.com/LibreFitOrg/LibreFit/issues/90)
-- Initial state of input sheet [#88](https://github.com/LibreFitOrg/LibreFit/pull/88)
+- Visual bug causing weight field to not show current value [#90](https://github.com/OpenFitOrg/OpenFit/issues/90)
+- Initial state of input sheet [#88](https://github.com/OpenFitOrg/OpenFit/pull/88)
 
 
 ## [0.3.0] - 2026-05-23
 
 > [!IMPORTANT]
-> You now can **share** your **custom exercise** with LibreFit's community and get a *supporter code*! See
-> more [here](https://github.com/LibreFitOrg/LibreFit/blob/main/CONTRIBUTING.md#improving-exercises-dataset)
+> You now can **share** your **custom exercise** with OpenFit's community and get a *supporter code*! See
+> more [here](https://github.com/OpenFitOrg/OpenFit/blob/main/CONTRIBUTING.md#improving-exercises-dataset)
 >
-> LibreFit is **now mirrored on Codeberg**! See the [announcement](https://github.com/LibreFitOrg/LibreFit/discussions/81)
+> OpenFit is **now mirrored on Codeberg**! See the [announcement](https://github.com/OpenFitOrg/OpenFit/discussions/81)
 
 ### Added
 
-- **New 28 exercises with instructions and high-quality images** [#28](https://github.com/LibreFitOrg/LibreFit/pull/28)
-- Option to dismiss scroll wheel automatically [#52](https://github.com/LibreFitOrg/LibreFit/pull/52)
+- **New 28 exercises with instructions and high-quality images** [#28](https://github.com/OpenFitOrg/OpenFit/pull/28)
+- Option to dismiss scroll wheel automatically [#52](https://github.com/OpenFitOrg/OpenFit/pull/52)
 - New languages: Portuguese (Brazil) 🇧🇷, Galician
 
 ### Changed
 
-- Save routines even when empty [#53](https://github.com/LibreFitOrg/LibreFit/issues/53)
-- Make license clearer [#36](https://github.com/LibreFitOrg/LibreFit/pull/36)
+- Save routines even when empty [#53](https://github.com/OpenFitOrg/OpenFit/issues/53)
+- Make license clearer [#36](https://github.com/OpenFitOrg/OpenFit/pull/36)
 
 ### Fixed
 
-- Workout metrics did not update after the initial save. [#42](https://github.com/LibreFitOrg/LibreFit/issues/42)
-- Rest timer notification sound was suppressed by other media. [#45](https://github.com/LibreFitOrg/LibreFit/issues/45)
-- Scroll wheel animation not allowing input [#47](https://github.com/LibreFitOrg/LibreFit/issues/47)
-- Rare crash in info workout screen [#64](https://github.com/LibreFitOrg/LibreFit/issues/64)
-- Parsing logic when typing weight [#43](https://github.com/LibreFitOrg/LibreFit/issues/43)
-- Typing time logic and parsing [#66](https://github.com/LibreFitOrg/LibreFit/issues/66)
+- Workout metrics did not update after the initial save. [#42](https://github.com/OpenFitOrg/OpenFit/issues/42)
+- Rest timer notification sound was suppressed by other media. [#45](https://github.com/OpenFitOrg/OpenFit/issues/45)
+- Scroll wheel animation not allowing input [#47](https://github.com/OpenFitOrg/OpenFit/issues/47)
+- Rare crash in info workout screen [#64](https://github.com/OpenFitOrg/OpenFit/issues/64)
+- Parsing logic when typing weight [#43](https://github.com/OpenFitOrg/OpenFit/issues/43)
+- Typing time logic and parsing [#66](https://github.com/OpenFitOrg/OpenFit/issues/66)
 
 ## [0.2.0] - 2026-04-26
 
 > [!IMPORTANT]
-> Now you can support LibreFit by making it available in your language. See
-> more [here](https://github.com/LibreFitOrg/LibreFit/blob/main/CONTRIBUTING.md#translations).
+> Now you can support OpenFit by making it available in your language. See
+> more [here](https://github.com/OpenFitOrg/OpenFit/blob/main/CONTRIBUTING.md#translations).
 
 We are excited to share a new version packed with features to make your workout tracking even
 smoother!
 
-If LibreFit helped you, please consider starring the repository or supporting the development
+If OpenFit helped you, please consider starring the repository or supporting the development
 through donations, contributions or translations — your support keeps the project free and
 constantly improving for everyone.
 
@@ -113,8 +113,8 @@ Thank you for your support!
 
 ### Added
 
-- Scroll wheel for easier input of reps, loads and time [#12](https://github.com/LibreFitOrg/LibreFit/issues/12)
-- Reordable exercises' list [#4](https://github.com/LibreFitOrg/LibreFit/issues/4)
+- Scroll wheel for easier input of reps, loads and time [#12](https://github.com/OpenFitOrg/OpenFit/issues/12)
+- Reordable exercises' list [#4](https://github.com/OpenFitOrg/OpenFit/issues/4)
 - New languages: Dutch 🇳🇱, German 🇩🇪, Spanish 🇪🇸, Czech 🇨🇿 and Simplified Chinese 🇨🇳
 
 ### Changed
@@ -123,24 +123,24 @@ Thank you for your support!
 
 ### Fixed
 
-- Crash when deleting a custom exercise [#17](https://github.com/LibreFitOrg/LibreFit/issues/17)
+- Crash when deleting a custom exercise [#17](https://github.com/OpenFitOrg/OpenFit/issues/17)
 - Incorrect date handling in different time
-  zones [#14](https://github.com/LibreFitOrg/LibreFit/issues/14)
+  zones [#14](https://github.com/OpenFitOrg/OpenFit/issues/14)
 
 ## [0.1.5] - 2026-02-23
 
 First public release. Bugs are expected! Report them so they can be fixed.
 
-[Unreleased]: https://github.com/LibreFitOrg/LibreFit/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/OpenFitOrg/OpenFit/compare/v0.4.1...HEAD
 
-[0.4.1]: https://github.com/LibreFitOrg/LibreFit/compare/v0.4.0...v0.4.1
+[0.4.1]: https://github.com/OpenFitOrg/OpenFit/compare/v0.4.0...v0.4.1
 
-[0.4.0]: https://github.com/LibreFitOrg/LibreFit/compare/v0.3.1...v0.4.0
+[0.4.0]: https://github.com/OpenFitOrg/OpenFit/compare/v0.3.1...v0.4.0
 
-[0.3.1]: https://github.com/LibreFitOrg/LibreFit/compare/v0.3.0...v0.3.1
+[0.3.1]: https://github.com/OpenFitOrg/OpenFit/compare/v0.3.0...v0.3.1
 
-[0.3.0]: https://github.com/LibreFitOrg/LibreFit/compare/v0.2.0...v0.3.0
+[0.3.0]: https://github.com/OpenFitOrg/OpenFit/compare/v0.2.0...v0.3.0
 
-[0.2.0]: https://github.com/LibreFitOrg/LibreFit/compare/v0.1.5...v0.2.0
+[0.2.0]: https://github.com/OpenFitOrg/OpenFit/compare/v0.1.5...v0.2.0
 
-[0.1.5]: https://github.com/LibreFitOrg/LibreFit/releases/tag/v0.1.5
+[0.1.5]: https://github.com/OpenFitOrg/OpenFit/releases/tag/v0.1.5

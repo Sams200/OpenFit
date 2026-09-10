@@ -1,8 +1,8 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * Copyright (c) 2024-2026. The LibreFit Contributors
+ * Copyright (c) 2024-2026. The OpenFit Contributors
  *
- * LibreFit is subject to additional terms covering author attribution and trademark usage;
+ * OpenFit is subject to additional terms covering author attribution and trademark usage;
  * see the ADDITIONAL_TERMS.md and TRADEMARK_POLICY.md files in the project root.
  */
 
@@ -20,7 +20,7 @@ plugins {
 
 
 android {
-    namespace = "org.librefit"
+    namespace = "org.openfit"
     compileSdk = 37
 
     buildFeatures {
@@ -35,7 +35,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "org.librefit.app"
+        applicationId = "org.openfit.app"
         minSdk = 26
         targetSdk = 37
 
@@ -112,7 +112,7 @@ android {
 }
 
 base {
-    archivesName.set("LibreFit")
+    archivesName.set("OpenFit")
 }
 
 ksp {

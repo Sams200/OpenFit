@@ -16,11 +16,11 @@
     <string name="version">版本</string>
     <string name="dependencies">依赖</string>
     <string name="privacy_policy">隐私政策</string>
-    <string name="privacy_policy_desc">LibreFit 无法访问网络。这意味着用户数据始终保存在该设备中。</string>
+    <string name="privacy_policy_desc">OpenFit 无法访问网络。这意味着用户数据始终保存在该设备中。</string>
     <string name="website">网站</string>
     <string name="source_code">源代码</string>
     <string name="license">授权协议</string>
-    <string name="license_desc">LibreFit 采用 GNU 通用公共许可证第 3.0 版（GPL-3）授权。</string>
+    <string name="license_desc">OpenFit 采用 GNU 通用公共许可证第 3.0 版（GPL-3）授权。</string>
     <string name="info">信息</string>
     <string name="add_set">添加组数</string>
     <string name="notes">备注</string>

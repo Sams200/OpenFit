@@ -1,0 +1,250 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * Copyright (c) 2025-2026. The OpenFit Contributors
+ *
+ * OpenFit is subject to additional terms covering author attribution and trademark usage;
+ * see the ADDITIONAL_TERMS.md and TRADEMARK_POLICY.md files in the project root.
+ */
+
+package org.openfit.ui.screens.measurements
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import org.openfit.db.entity.Measurement
+import org.openfit.db.repository.MeasurementRepository
+import org.openfit.db.repository.UserPreferencesRepository
+import org.openfit.di.qualifiers.DefaultDispatcher
+import org.openfit.enums.MeasurementCardState
+import org.openfit.enums.chart.MeasurementChart
+import org.openfit.enums.userPreferences.UnitSystem
+import org.openfit.models.Weight
+import org.openfit.ui.components.charts.Point
+import org.openfit.ui.models.doubleValue
+import org.openfit.util.Formatter
+import java.time.LocalDateTime
+import javax.inject.Inject
+
+/**
+ * Default body weight (in kilograms) used to pre-fill the new-measurement card when no valid
+ * saved weight exists.
+ */
+private const val DEFAULT_BODY_WEIGHT_KG = 60.0
+
+@HiltViewModel
+class MeasurementScreenViewModel @Inject constructor(
+    private val measurementRepository: MeasurementRepository,
+    @param:DefaultDispatcher private val defaultDispatcher: CoroutineDispatcher,
+    userPreferencesRepository: UserPreferencesRepository
+) : ViewModel() {
+    val useScrollWheelForInput = userPreferencesRepository.useScrollWheelForInput
+
+    val dismissScrollWheelInputAutomatically =
+        userPreferencesRepository.dismissScrollWheelInputAutomatically
+
+
+    private val _measurementChart = MutableStateFlow(MeasurementChart.BODY_WEIGHT)
+    val measurementChart = _measurementChart.asStateFlow()
+
+    fun updateMeasurementChart(newMeasurementChart: MeasurementChart) {
+        _measurementChart.update { newMeasurementChart }
+    }
+
+
+    val measurements: StateFlow<List<Measurement>> = measurementRepository.measurements
+        .distinctUntilChanged()
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
+
+
+    val points: StateFlow<List<Point>> =
+        combine(
+            measurements,
+            measurementChart
+        ) { measurements, measurementChart ->
+            measurements
+                .filter {
+                    when (measurementChart) {
+                        MeasurementChart.BODY_WEIGHT -> it.bodyWeight.doubleValue(unitSystem.value) != 0.0
+                        MeasurementChart.FAT_MASS -> it.bodyFatPercentage != 0
+                        MeasurementChart.LEAN_MASS -> it.muscleMassPercentage != 0
+                    }
+                }
+                .map {
+                    Point(
+                        yValues = listOf(
+                            when (measurementChart) {
+                                MeasurementChart.BODY_WEIGHT -> it.bodyWeight.doubleValue(unitSystem.value)
+                                MeasurementChart.FAT_MASS -> it.bodyFatPercentage
+                                MeasurementChart.LEAN_MASS -> it.muscleMassPercentage
+                            }.toDouble()
+                        ),
+                        xValue = Formatter.getShortDateFromLocalDate(it.date)
+                    )
+                }
+        }
+            .distinctUntilChanged()
+            .flowOn(defaultDispatcher)
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList()
+            )
+
+
+    private val _idMeasurement = MutableStateFlow(0L)
+    val idMeasurement = _idMeasurement.asStateFlow()
+
+    fun updateIdMeasurement(newValue: Long) {
+        _idMeasurement.update { newValue }
+    }
+
+    val unitSystem = userPreferencesRepository.unitSystem
+
+    private val _bodyweight = MutableStateFlow<Weight?>(null)
+    val bodyWeight = _bodyweight.asStateFlow()
+
+    fun updateBodyweight(newValue: String) {
+        _bodyweight.update {
+            Formatter.parseDoubleFromString(newValue)?.let { value ->
+                when (unitSystem.value) {
+                    UnitSystem.METRIC -> Weight.kilograms(value)
+                    UnitSystem.IMPERIAL -> Weight.pounds(value)
+                }
+            }
+        }
+    }
+
+
+    private val _fatMass = MutableStateFlow<Int?>(null)
+    val fatMass = _fatMass.asStateFlow()
+
+    fun updateFatMass(newValue: String) {
+        _fatMass.update {
+            Formatter.parseIntegerFromString(string = newValue, maxValue = 100, minValue = 0)
+        }
+    }
+
+
+    private val _leanMass = MutableStateFlow<Int?>(null)
+    val leanMass = _leanMass.asStateFlow()
+
+    fun updateLeanMass(newValue: String) {
+        _leanMass.update {
+            Formatter.parseIntegerFromString(string = newValue, maxValue = 100, minValue = 0)
+        }
+    }
+
+
+    private val _notes = MutableStateFlow("")
+    val notes = _notes.asStateFlow()
+
+    fun updateNotes(newValue: String) {
+        _notes.update { newValue }
+    }
+
+
+    private val _date = MutableStateFlow(LocalDateTime.now())
+    val date = _date.asStateFlow()
+
+    fun updateDate(newValue: LocalDateTime) {
+        _date.update { newValue }
+    }
+
+
+    private val _measurementCardState = MutableStateFlow(MeasurementCardState.NEW)
+    val measurementCardState = _measurementCardState.asStateFlow()
+
+    fun updateMeasurementCardState(measurementCardState: MeasurementCardState) {
+        _measurementCardState.update { measurementCardState }
+    }
+
+
+    /**
+     * The measurement currently backing the add/edit card.
+     *
+     * In [MeasurementCardState.EDIT] it resolves the measurement with the selected
+     * [Measurement.id], falling back to a default one when it cannot be found; in
+     * [MeasurementCardState.NEW] it pre-fills the card with the last saved body weight,
+     * or [DEFAULT_BODY_WEIGHT_KG] when no valid measurement exists.
+     */
+    private val currentMeasurement: StateFlow<Measurement> =
+        combine(idMeasurement, measurements, measurementCardState) { id, m, mcs ->
+            when (mcs) {
+                MeasurementCardState.EDIT -> m.find { it.id == id } ?: Measurement()
+                MeasurementCardState.NEW -> Measurement(
+                    bodyWeight = m.lastSavedBodyWeight() ?: Weight.kilograms(DEFAULT_BODY_WEIGHT_KG)
+                )
+            }
+        }
+            .distinctUntilChanged()
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = Measurement() // Start with null until the first ID is processed
+            )
+
+    init {
+        viewModelScope.launch {
+            // A new current measurement is emitted when idMeasurement changes and MeasurementCardState is EDIT
+            currentMeasurement.collect { measurement ->
+                _notes.update { measurement.notes }
+                _bodyweight.update { measurement.bodyWeight }
+                _leanMass.update { measurement.muscleMassPercentage.takeIf { it != 0 } }
+                _fatMass.update { measurement.bodyFatPercentage.takeIf { it != 0 } }
+                _date.update { measurement.date }
+            }
+        }
+    }
+
+
+    fun upsertMeasurementToDB() {
+        viewModelScope.launch {
+            measurementRepository.upsertMeasurement(
+                Measurement(
+                    id = if (measurementCardState.value == MeasurementCardState.EDIT)
+                        idMeasurement.value else 0L,
+                    bodyWeight = bodyWeight.value ?: Weight.zero(),
+                    notes = notes.value,
+                    muscleMassPercentage = leanMass.value ?: 0,
+                    bodyFatPercentage = fatMass.value ?: 0,
+                    date = date.value
+                )
+            )
+
+            _measurementCardState.update { MeasurementCardState.NEW }
+        }
+    }
+
+    fun deleteMeasurementById(id: Long) {
+        viewModelScope.launch {
+            measurementRepository.deleteById(id)
+
+            _measurementCardState.update { MeasurementCardState.NEW }
+        }
+    }
+}
+
+/**
+ * Returns the body weight of the most recently recorded measurement (by [Measurement.date]),
+ * or `null` when no measurement with a valid (non-zero) weight exists.
+ *
+ * Zero-weight entries are ignored so degenerate rows cannot pre-fill the form with a value
+ * that would keep the save action disabled.
+ */
+private fun List<Measurement>.lastSavedBodyWeight(): Weight? =
+    maxByOrNull { it.date }?.bodyWeight?.takeIf { it.inKilograms != 0.0 }

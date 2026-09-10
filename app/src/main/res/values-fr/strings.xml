@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="home">Home</string>
     <string name="profile">Profil</string>
     <string name="settings">Paramètres</string>
@@ -16,11 +16,11 @@
     <string name="contribute">Contribuer</string>
     <string name="info">Info</string>
     <string name="privacy_policy">Politique de confidentialité</string>
-    <string name="privacy_policy_desc">LibreFit ne peut pas accéder à Internet. Cela signifie que les données de l\'utilisateur ne quittent jamais l\'appareil.</string>
+    <string name="privacy_policy_desc">OpenFit ne peut pas accéder à Internet. Cela signifie que les données de l\'utilisateur ne quittent jamais l\'appareil.</string>
     <string name="website">Site web</string>
     <string name="source_code">Code source</string>
     <string name="license">Licence</string>
-    <string name="license_desc">LibreFit est distribué sous licence GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit est distribué sous licence GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Contributeurs</string>
     <string name="founder">Fondateur</string>
     <string name="translators">Traducteurs</string>
@@ -133,8 +133,8 @@
     <string name="statistics_desc">- **Temps écoulé** : durée totale de la séance d\'entraînement.\n- **Date** : date à laquelle la séance d\'entraînement a été effectuée.\n- **Volume** : poids total soulevé pendant la séance, calculé en multipliant, pour chaque série, le nombre de répétitions effectuées avec ce poids. Un volume plus élevé favorise l\'hypertrophie musculaire et les gains de force au fil du temps.\n- **Exercices** : nombre total d\'exercices inclus dans cette séance.\n- **Nombre total de séries** : nombre cumulé de séries prévues pour chaque exercice. Une série correspond à un groupe de répétitions consécutives effectuées sans pause.\n- **Séries effectuées** : nombre de séries réalisées comme prévu.</string>
     <string name="muscle_distribution_desc">- Ce graphique présente la **performance moyenne de chaque muscle sur des périodes spécifiques**, en fonction du paramètre sélectionné.\n- La légende indique la période représentée par chaque colonne.\n- La colonne **Historique** inclut tous les entraînements effectués avant chaque période affichée.\n- Le paramètre peut être modifié en sélectionnant un nouveau paramètre au-dessus du graphique.</string>
     <string name="exercises_distribution_desc">- Ce graphique présente la **performance moyenne de chaque exercice sur des périodes spécifiques**, en fonction du paramètre sélectionné.\n- La légende indique la période représentée par chaque colonne.\n- La colonne **Historique** inclut tous les entraînements effectués avant chaque période affichée.\n- Le paramètre peut être modifié en sélectionnant un nouveau paramètre au-dessus du graphique.</string>
-    <string name="librefit_is_under_threat">LibreFit est menacé</string>
-    <string name="librefit_is_under_threat_desc">- À partir de septembre 2026, Google prévoit de verrouiller Android en vous empêchant d\'\'installer toute application, sauf si son développeur a payé des frais, s\'est enregistré et a fourni ses informations personnelles à Google.\n- Cette politique détruit l\'\'écosystème ouvert d\'Android et vous prive de votre droit fondamental de choisir les logiciels que vous pouvez exécuter sur votre appareil.\n- Pour en savoir plus sur cette menace qui pèse sur votre liberté numérique et sur la manière dont vous pouvez contribuer à l\'\'enrayer, rendez-vous sur [keepandroidopen.org](https://keepandroidopen.org).</string>
+    <string name="openfit_is_under_threat">OpenFit est menacé</string>
+    <string name="openfit_is_under_threat_desc">- À partir de septembre 2026, Google prévoit de verrouiller Android en vous empêchant d\'\'installer toute application, sauf si son développeur a payé des frais, s\'est enregistré et a fourni ses informations personnelles à Google.\n- Cette politique détruit l\'\'écosystème ouvert d\'Android et vous prive de votre droit fondamental de choisir les logiciels que vous pouvez exécuter sur votre appareil.\n- Pour en savoir plus sur cette menace qui pèse sur votre liberté numérique et sur la manière dont vous pouvez contribuer à l\'\'enrayer, rendez-vous sur [keepandroidopen.org](https://keepandroidopen.org).</string>
     <string name="weight">Poids</string>
     <string name="rest_time">Temps de repos</string>
     <string name="type_of_set">Type de série</string>
@@ -214,7 +214,7 @@
     <string name="delete_measurement_question">Supprimer la mesure ?</string>
     <string name="delete_measurement_text">Êtes-vous sûr de vouloir supprimer cette mesure ? Cette action est irréversible</string>
     <string name="before_starting_the_workout">Avant de démarrer l\'entraînement</string>
-    <string name="best_experience_permissions">Pour profiter pleinement de LibreFit, vous devez accorder l\'autorisation suivante :</string>
+    <string name="best_experience_permissions">Pour profiter pleinement de OpenFit, vous devez accorder l\'autorisation suivante :</string>
     <string name="notifications_permission">Notifications</string>
     <string name="app_works_without_permission">L\'application peut fonctionner sans cette autorisation.</string>
     <string name="dont_ask_again">Ne plus demander</string>
@@ -233,11 +233,11 @@
     <string name="start_completing_workout">Commencez par compléter un entraînement</string>
     <string name="privacy">Confidentialité</string>
     <string name="privacy_notice">Politique de confidentialité</string>
-    <string name="privacy_notice_summary">LibreFit vous offre une **confidentialité maximale** en fonctionnant **sans aucun accès Internet**. De plus, toutes les permissions sont **optionnelles** et ne permettent aucune collecte de données.</string>
+    <string name="privacy_notice_summary">OpenFit vous offre une **confidentialité maximale** en fonctionnant **sans aucun accès Internet**. De plus, toutes les permissions sont **optionnelles** et ne permettent aucune collecte de données.</string>
     <string name="privacy_notice_optional_perm">Autorisations optionnelles</string>
     <string name="privacy_notice_notification_perm">**Notifications** : Permet à l\'application de vous informer sur vos entraînement en cours et de vous alerter de la fin des temps de repos.</string>
     <string name="privacy_notice_default_perm">Autorisation accordée par défaut</string>
-    <string name="privacy_notice_foreground_perm">**Service de premier plan** : Autorisation accordée automatiquement à l\'installation, permettant le fonctionnement de LibreFit au premier plan durant vos entraînements.</string>
+    <string name="privacy_notice_foreground_perm">**Service de premier plan** : Autorisation accordée automatiquement à l\'installation, permettant le fonctionnement de OpenFit au premier plan durant vos entraînements.</string>
     <string name="workout">Entraînement</string>
     <string name="quit_workout_question">Quitter l\'entraînement ?</string>
     <string name="resume">Reprendre</string>
@@ -305,7 +305,7 @@
     <string name="exercises_distribution">Répartition des exercices</string>
     <string name="workout_saved">Entraînement sauvegardé</string>
     <string name="routine_saved">Routine sauvegardée</string>
-    <string name="librefit_made_by_you">est fait avec ❤\n pour vous par des personnes comme vous</string>
+    <string name="openfit_made_by_you">est fait avec ❤\n pour vous par des personnes comme vous</string>
     <string name="supporter_version">Version Supporter</string>
     <string name="supporter_version_desc_1">Devenez un supporter en faisant un don, en contribuant au code, en traduisant ou en ajoutant un exercice</string>
     <string name="supporter_version_desc_2">Chaque supporter peut demander la Version Supporter qui comprend :</string>
@@ -320,8 +320,8 @@
     <string name="exercise_saved">Exercice sauvegardé</string>
     <string name="valid_companion_app_signature">Application compagnon valide</string>
     <string name="invalid_companion_app_signature">Application compagnon non valide</string>
-    <string name="librefit_app_not_found">LibreFit introuvable</string>
-    <string name="librefit_signature_error">Signature LibreFit incorrecte</string>
+    <string name="openfit_app_not_found">OpenFit introuvable</string>
+    <string name="openfit_signature_error">Signature OpenFit incorrecte</string>
     <string name="companion_app_not_found">Application compagnon non trouvée</string>
     <string name="companion_signature_error">Signature application compagnon incorrecte</string>
     <string name="valid_code">Code valide</string>
@@ -336,8 +336,8 @@
     <string name="unknown_error">Erreur inconnue</string>
     <string name="lets_build">Construisons</string>
     <string name="together">ensemble</string>
-    <string name="motivation_1">LibreFit est un projet passion, crée par une personne qui pense que les logiciels doivent être libres, simples, beaux et avant tout respectueux de votre vie privée.</string>
-    <string name="motivation_3">LibreFit existe seulement grâce a votre soutien, via des dons ou via des contributions au code et aux traductions.</string>
+    <string name="motivation_1">OpenFit est un projet passion, crée par une personne qui pense que les logiciels doivent être libres, simples, beaux et avant tout respectueux de votre vie privée.</string>
+    <string name="motivation_3">OpenFit existe seulement grâce a votre soutien, via des dons ou via des contributions au code et aux traductions.</string>
     <string name="motivation_4">Tous les donateurs et contributeurs obtiennent la version supporter ainsi qu\'une mention dans la présente application et sur GitHub.</string>
     <string name="insert_code">Saisir le code</string>
     <string name="step">Étape</string>
@@ -349,7 +349,7 @@
     <string name="tut_create_routine_4">Réglez les séries, les répétitions et le classement de vos exercices. Des que vous êtes prêt, cliquez sur le bouton Enregistrer dans le coin supérieur droit.</string>
     <string name="tut_create_routine_5">Bravo, votre première routine est créée ! Vous pouvez désormais utiliser ce modèle pour démarrer un entraînement.</string>
     <string name="complete_workout">Terminer l\'entraînement</string>
-    <string name="tut_complete_workout_headline">Lorsque vous démarrez un entraînement, vous suivez une séance en direct. LibreFit indique vos résultats précédents pour chaque série, facilitant ainsi vos objectifs de surcharge progressive.</string>
+    <string name="tut_complete_workout_headline">Lorsque vous démarrez un entraînement, vous suivez une séance en direct. OpenFit indique vos résultats précédents pour chaque série, facilitant ainsi vos objectifs de surcharge progressive.</string>
     <string name="tut_complete_workout_1">Pour commencer un enregistrement, lancez un entraînement depuis une de vos routines ou choisissez un entraînement vide pour une session spontanée.</string>
     <string name="tut_complete_workout_2">En démarrant depuis une routine, vos exercices prévus apparaissent directement. Vous pouvez aussi en rajouter au fil de la séance.</string>
     <string name="equipment_pull_up_bar">Barre de traction</string>

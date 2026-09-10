@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ SPDX-License-Identifier: GPL-3.0-or-later
-  ~ Copyright (c) 2026. The LibreFit Contributors
+  ~ Copyright (c) 2026. The OpenFit Contributors
   ~
-  ~ LibreFit is subject to additional terms covering author attribution and trademark usage;
+  ~ OpenFit is subject to additional terms covering author attribution and trademark usage;
   ~ see the ADDITIONAL_TERMS.md and TRADEMARK_POLICY.md files in the project root.
   --><resources>
     <string name="home">Inicio</string>
@@ -21,11 +21,11 @@
     <string name="contribute">Contribuir</string>
     <string name="info">Información</string>
     <string name="privacy_policy">Política de privacidad</string>
-    <string name="privacy_policy_desc">LibreFit no accede a la Web. Todo dato del usuario será guardado en este dispositivo.</string>
+    <string name="privacy_policy_desc">OpenFit no accede a la Web. Todo dato del usuario será guardado en este dispositivo.</string>
     <string name="website">Sitio Web</string>
     <string name="source_code">Código fuente</string>
     <string name="license">Licencia</string>
-    <string name="license_desc">LibreFit está bajo la GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit está bajo la GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Colaboradores</string>
     <string name="founder">Fundador</string>
     <string name="translators">Traductores</string>
@@ -57,7 +57,7 @@
     <string name="bodyweight">Ejercicio corporal</string>
     <string name="load_only">Peso</string>
     <string name="load">Carga</string>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="add_set">Añadir set</string>
     <string name="notes">Notas</string>
     <string name="title_cannot_be_empty">El título no puede estar vacío</string>
@@ -127,7 +127,7 @@
     <string name="delete_measurement_question">¿Borrar medición?</string>
     <string name="delete_measurement_text">¿Estás seguro que quieres borrar esta medición? Esta acción no se puede deshacer</string>
     <string name="before_starting_the_workout">Antes de inciiar el entrenamiento</string>
-    <string name="best_experience_permissions">Para una mejor experiencia en LibreFit, es necesario aceptar el siguiente permiso:</string>
+    <string name="best_experience_permissions">Para una mejor experiencia en OpenFit, es necesario aceptar el siguiente permiso:</string>
     <string name="notifications_permission">Notificaciones</string>
     <string name="notifications_permission_desc">Permite enviar notificaciones sobre los entrenamientos en curso y los intervalos de descanso.</string>
     <string name="app_works_without_permission">La aplicación funcionará incluso sin este permiso.</string>
@@ -146,14 +146,14 @@
     <string name="start_completing_workout">Empezar por completar un entrenamiento</string>
     <string name="privacy">Privacidad</string>
     <string name="privacy_notice">Aviso de privacidad</string>
-    <string name="privacy_notice_summary">LibreFit ofrece **la máxima privacidad**, ya que **no puede conectarse a Internet**. Además, todos los permisos son **opcionales** y no permiten la recopilación de datos.</string>
+    <string name="privacy_notice_summary">OpenFit ofrece **la máxima privacidad**, ya que **no puede conectarse a Internet**. Además, todos los permisos son **opcionales** y no permiten la recopilación de datos.</string>
     <string name="privacy_notice_optional_perm">Permisos opcionales</string>
     <string name="bodyweight_with_load">Peso corporal con carga</string>
     <string name="reorder">Reordenar</string>
     <string name="second_abbreviation">s</string>
     <string name="privacy_notice_notification_perm">**Notificaciones**: Este permiso permite que la aplicación envíe notificaciones sobre tus sesiones de entrenamiento en curso y alertas cuando finalicen los períodos de descanso.</string>
     <string name="privacy_notice_default_perm">Permiso concedido por defecto</string>
-    <string name="privacy_notice_foreground_perm">**Servicio en primer plano**: Este permiso se otorga automáticamente al instalar LibreFit y permite que se ejecute en primer plano durante un entrenamiento.</string>
+    <string name="privacy_notice_foreground_perm">**Servicio en primer plano**: Este permiso se otorga automáticamente al instalar OpenFit y permite que se ejecute en primer plano durante un entrenamiento.</string>
     <string name="rest">Descanso</string>
     <string name="add_ten_seconds">+10s</string>
     <string name="reduce_ten_seconds">-10s</string>
@@ -188,8 +188,8 @@
     <string name="exercise_saved">Ejercicio guardado</string>
     <string name="valid_companion_app_signature">Validar aplicación complementaria</string>
     <string name="invalid_companion_app_signature">Inválida aplicación complementaria</string>
-    <string name="librefit_app_not_found">LibreFit no encontrado</string>
-    <string name="librefit_signature_error">Error de firma de LibreFit</string>
+    <string name="openfit_app_not_found">OpenFit no encontrado</string>
+    <string name="openfit_signature_error">Error de firma de OpenFit</string>
     <string name="companion_app_not_found">Aplicación complementaria no encontrada</string>
     <string name="companion_signature_error">Error de firma de aplicación complementaria</string>
     <string name="valid_code">Código válido</string>
@@ -203,9 +203,9 @@
     <string name="unknown_error">Error desconocido</string>
     <string name="lets_build">Pongámonos en forma</string>
     <string name="together">juntos</string>
-    <string name="motivation_1">LibreFit es un proyecto de pasión, creado por una persona que cree que el software debe ser abierto, sencillo, atractivo y, sobre todo, respetuoso con tu privacidad.</string>
+    <string name="motivation_1">OpenFit es un proyecto de pasión, creado por una persona que cree que el software debe ser abierto, sencillo, atractivo y, sobre todo, respetuoso con tu privacidad.</string>
     <string name="motivation_2">Dedico incontables horas en el diseño, programación y refinando cada detalle para la mejor experiencia posible. Es un compromiso contigo, el usuario, y por un mundo digital mejor.</string>
-    <string name="motivation_3">LibreFit solo es posible con tu apoyo, a través de donaciones o contribuyendo al código o a las traducciones.</string>
+    <string name="motivation_3">OpenFit solo es posible con tu apoyo, a través de donaciones o contribuyendo al código o a las traducciones.</string>
     <string name="insert_code">Insertar código</string>
     <string name="step">Paso</string>
     <string name="tutorial">Tutorial</string>
@@ -214,7 +214,7 @@
     <string name="tut_create_routine_3">Busca y selecciona los ejercicios, después presiona el botón \'Añadir\' en la esquina superior derecha.</string>
     <string name="tut_create_routine_4">Ajusta los sets, repeticiones y ordena tus ejercicios. Cuando estés listo, presiona el botón \'Guardar\' en la esquina superior derecha.</string>
     <string name="tut_create_routine_5">Felicidades, ¡has creado tu primera rutina! Ahora puedes comenzar un entrenamiento.</string>
-    <string name="tut_complete_workout_headline">Cuando inicias un entrenamiento, estás registrando una sesión en vivo. LibreFit solo muestra tu rendimiento anterior en cada serie, lo que te permite ponerte a prueba y aspirar a una sobrecarga progresiva.</string>
+    <string name="tut_complete_workout_headline">Cuando inicias un entrenamiento, estás registrando una sesión en vivo. OpenFit solo muestra tu rendimiento anterior en cada serie, lo que te permite ponerte a prueba y aspirar a una sobrecarga progresiva.</string>
     <string name="tut_complete_workout_1">Para iniciar a registrar tus entrenamientos, comienza una sesión de una de tus rutinas o elige una sesión en blanco para entrenar de forma espontánea.</string>
     <string name="tut_complete_workout_2">Si has iniciado una rutina, los ejercicios planificados estarán cargados. Puedes añadir más sobre la marcha.</string>
     <string name="tut_complete_workout_3">Registra el peso y repetición para cada serie. Cuando marques una serie como completado, el temporizador aparecerá en automático.</string>
@@ -229,7 +229,7 @@
     <string name="muscles_distribution">Distribución de músculos</string>
     <string name="exercises_distribution">Distribución de ejercicios</string>
     <string name="workout_saved">Entrenamiento guardado</string>
-    <string name="librefit_made_by_you">Hecha con ❤\n. para ti por gente como tú</string>
+    <string name="openfit_made_by_you">Hecha con ❤\n. para ti por gente como tú</string>
     <string name="muscle_triceps">Triceps</string>
     <string name="verify_companion_app">Verificar aplicación complementaria</string>
     <string name="type_of_set_desc">- **Carga**: número determinado de repeticiones realizadas contra una resistencia externa. *Ejemplos: press de banca, flexiones con mancuernas.*\n- **Peso corporal**: número determinado de repeticiones realizadas utilizando el propio cuerpo como resistencia. *Ejemplos: dominadas, flexiones, abdominales.*\n- **Peso corporal con carga**: número determinado de repeticiones realizadas utilizando el cuerpo y una carga como resistencia. *Ejemplos: dominadas con peso, fondos con peso.*\n- **Duración**: mide el tiempo de ejecución de las repeticiones. *Ejemplos: planchas, calentamiento, estiramiento.*</string>
@@ -263,7 +263,7 @@
     <string name="edit">Editar</string>
     <string name="not_enough_data">No hay datos suficientes para mostrar este gráfico</string>
     <string name="category_cardio">Cardio</string>
-    <string name="librefit_is_under_threat">LibreFit está bajo amenaza</string>
+    <string name="openfit_is_under_threat">OpenFit está bajo amenaza</string>
     <string name="cancel_dialog">Cancelar</string>
     <string name="type_of_set">Tipo de serie</string>
     <string name="name">Nombre</string>
@@ -322,12 +322,12 @@
     <string name="rest_timer_channel_desc">Este canal se utiliza para proporcionar alertas cuando termina el tiempo de descanso.</string>
     <string name="language_ukrainian">Ucraniano</string>
     <string name="rest_timer_channel_title">Alertas de descanso</string>
-    <string name="url_source_code_codeberg">https://codeberg.org/LibreFitOrg/LibreFit</string>
+    <string name="url_source_code_codeberg">https://codeberg.org/OpenFitOrg/OpenFit</string>
     <string name="dismiss_scroll_wheel_manually_desc">La barra desplazable no se cerrará automáticamente.</string>
     <string name="add_to_empty_workout">Comienza añadiendo un ejercicio a tu entrenamiento</string>
     <string name="rest_timer_sound_on_desc">Reproducir sonido al finalizar temporizador de descanso</string>
     <string name="language_arabic">Árabe</string>
-    <string name="librefit_is_under_threat_desc">- A partir de septiembre de 2026, Google planea cerrar Android **impidiendo que puedas instalar cualquier aplicación** a menos que su desarrollador haya pagado una tarifa, se haya registrado y haya entregado su identificación personal a Google.\nEsta política destruye el ecosistema abierto de Android y **te quita tu derecho básico a elegir qué software puedes ejecutar en el dispositivo que te pertenece**.\nPor favor visita [keepandroidopen.org](https://keepandroidopen.org) para saber más sobre esta amenaza a tu libertad digital y cómo puedes ayudar a detenerla.</string>
+    <string name="openfit_is_under_threat_desc">- A partir de septiembre de 2026, Google planea cerrar Android **impidiendo que puedas instalar cualquier aplicación** a menos que su desarrollador haya pagado una tarifa, se haya registrado y haya entregado su identificación personal a Google.\nEsta política destruye el ecosistema abierto de Android y **te quita tu derecho básico a elegir qué software puedes ejecutar en el dispositivo que te pertenece**.\nPor favor visita [keepandroidopen.org](https://keepandroidopen.org) para saber más sobre esta amenaza a tu libertad digital y cómo puedes ayudar a detenerla.</string>
     <string name="show_only_custom_exercises">Mostrar solo ejercicios personalizados</string>
     <string name="dismiss_scroll_wheel_automatically_desc">La rueda desplazable se cerrará automáticamente.</string>
     <string name="tut_complete_workout_5">En la pantalla de resumen puedes editar el título, añadir notas o cambiar la fecha. Toca \"Guardar\" en la esquina superior derecha para guardar el entrenamiento.</string>

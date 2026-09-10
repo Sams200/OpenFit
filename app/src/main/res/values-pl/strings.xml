@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="profile">Profil</string>
     <string name="settings">Ustawienia</string>
     <string name="add_exercise">Dodaj ćwiczenie</string>

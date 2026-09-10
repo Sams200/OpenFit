@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="home">Início</string>
     <string name="profile">Perfil</string>
     <string name="settings">Configurações</string>
@@ -16,11 +16,11 @@
     <string name="contribute">Contribuir</string>
     <string name="info">Informações</string>
     <string name="privacy_policy">Política de privacidade</string>
-    <string name="privacy_policy_desc">LibreFit não possui acesso a Internet. Isso significa que suas informações nunca saem do seu aparelho.</string>
+    <string name="privacy_policy_desc">OpenFit não possui acesso a Internet. Isso significa que suas informações nunca saem do seu aparelho.</string>
     <string name="website">Website</string>
     <string name="source_code">Código fonte</string>
     <string name="license">Licença</string>
-    <string name="license_desc">O LibreFit é licenciado sob a GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">O OpenFit é licenciado sob a GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Contribuidores</string>
     <string name="founder">Fundador</string>
     <string name="translators">Tradutores</string>
@@ -123,7 +123,7 @@
     <string name="delete_measurement_question">Deletar medição?</string>
     <string name="delete_measurement_text">Você tem certeza que você quer excluir essa medição? Essa ação não pode ser revertida</string>
     <string name="before_starting_the_workout">Antes de começar o treino</string>
-    <string name="best_experience_permissions">Para melhor experiência com LibreFit, Você tem que dar a seguinte permissão:</string>
+    <string name="best_experience_permissions">Para melhor experiência com OpenFit, Você tem que dar a seguinte permissão:</string>
     <string name="notifications_permission">Notificações</string>
     <string name="notifications_permission_desc">Isso permite enviar notificações sobre o treino atual e os tempos de intervalo.</string>
     <string name="app_works_without_permission">O aplicativo vai funcionar mesmo sem essa permissão.</string>
@@ -142,11 +142,11 @@
     <string name="start_completing_workout">Começe completando um treino</string>
     <string name="privacy">Privacidade</string>
     <string name="privacy_notice">Nota de privacidade</string>
-    <string name="privacy_notice_summary">LibreFit entrega **máxima privacidade** tanto que **o app não acessa a Internet**. Ainda mais que todas as permissões são **opcionais** e não permitem coleta de dados.</string>
+    <string name="privacy_notice_summary">OpenFit entrega **máxima privacidade** tanto que **o app não acessa a Internet**. Ainda mais que todas as permissões são **opcionais** e não permitem coleta de dados.</string>
     <string name="privacy_notice_optional_perm">Permissões opcionais</string>
     <string name="privacy_notice_notification_perm">**Notificações**: Essa permissão permite o app enviar notificações sobre o treino atual e alertas de quando o período de descanso acabou.</string>
     <string name="privacy_notice_default_perm">Permissão garantida por padrão</string>
-    <string name="privacy_notice_foreground_perm">**Serviço em primeiro plano**: Essa permissão é automaticamente garantida quando LibreFit é instalado e isso o permite de rodar no primeiro plano durante um treino.</string>
+    <string name="privacy_notice_foreground_perm">**Serviço em primeiro plano**: Essa permissão é automaticamente garantida quando OpenFit é instalado e isso o permite de rodar no primeiro plano durante um treino.</string>
     <string name="workout">Treino</string>
     <string name="quit_workout_question">Sair do treino?</string>
     <string name="quit_workout_text">Tem certeza que você quer sair? Seu treino não será salvo</string>
@@ -199,7 +199,7 @@
     <string name="exercises_distribution">Distribuição dos exercícios</string>
     <string name="workout_saved">Treino salvo</string>
     <string name="routine_saved">Rotina salva</string>
-    <string name="librefit_made_by_you">É feito com ❤\npara pessoas como você</string>
+    <string name="openfit_made_by_you">É feito com ❤\npara pessoas como você</string>
     <string name="supporter_version">Versão do apoiador</string>
     <string name="supporter_version_desc_1">Se torne um apoiador fazendo doações, contribuindo para o código fonte, traduzindo ou adicionando um exercício ao dataset.</string>
     <string name="supporter_version_desc_2">Todo apoiador pode conseguir a Versão do Apoiador que inclui:</string>
@@ -215,8 +215,8 @@
     <string name="exercise_saved">Exercício salvo</string>
     <string name="valid_companion_app_signature">Aplicativo complementar válido</string>
     <string name="invalid_companion_app_signature">Aplicativo complementar inválido</string>
-    <string name="librefit_app_not_found">LibreFit não encontrado</string>
-    <string name="librefit_signature_error">Erro de assinatura</string>
+    <string name="openfit_app_not_found">OpenFit não encontrado</string>
+    <string name="openfit_signature_error">Erro de assinatura</string>
     <string name="companion_app_not_found">Aplicativo complementar não encontrado</string>
     <string name="companion_signature_error">Erro de assinatura no aplicativo complementar</string>
     <string name="valid_code">Código valido</string>
@@ -232,9 +232,9 @@
     <string name="unknown_error">Erro desconhecido</string>
     <string name="lets_build">Vamos construir</string>
     <string name="together">juntos</string>
-    <string name="motivation_1">LibreFit é um projeto da minha paixão, construído por uma pessoa que acredita que programas devem ser abertos, simples, bonitos, e acima de tudo, respeitar sua privacidade.</string>
+    <string name="motivation_1">OpenFit é um projeto da minha paixão, construído por uma pessoa que acredita que programas devem ser abertos, simples, bonitos, e acima de tudo, respeitar sua privacidade.</string>
     <string name="motivation_2">Eu dediquei incontáveis horas em design, programação, e refinando cada detalhe para criar a melhor experiência possível. É um compromisso para você, o usuário, e para um melhor mundo digital.</string>
-    <string name="motivation_3">Librefit só e possível com seu apoio, seja você doando ou contribuído para os códigos ou traduções.</string>
+    <string name="motivation_3">Openfit só e possível com seu apoio, seja você doando ou contribuído para os códigos ou traduções.</string>
     <string name="motivation_4">Todos os doadores e contribuidores conseguem a Versão de Suporte e um crédito no aplicativo e no GitHub.</string>
     <string name="insert_code">Inserir código</string>
     <string name="step">Passo</string>
@@ -248,9 +248,9 @@
     <string name="tut_create_routine_4">Ajuste as séries, repetições e a ordem dos seus exercícios. Quando estiver pronto, toque no botão \"Salvar\" no canto superior direito.</string>
     <string name="tut_create_routine_5">Parabéns, você criou sua primeira rotina! Você pode usá-la para começar um treino.</string>
     <string name="complete_workout">Treino completo</string>
-    <string name="tut_complete_workout_headline">Ao iniciar um treino, você está registrando uma sessão ao vivo. O LibreFit mostra seu desempenho anterior em cada série, facilitando o desafio pessoal e a busca por sobrecarga progressiva.</string>
+    <string name="tut_complete_workout_headline">Ao iniciar um treino, você está registrando uma sessão ao vivo. O OpenFit mostra seu desempenho anterior em cada série, facilitando o desafio pessoal e a busca por sobrecarga progressiva.</string>
     <string name="tut_complete_workout_1">Para começar a registrar suas atividades, inicie um treino de uma de suas rotinas ou escolha um treino vazio para uma sessão espontânea.</string>
-    <string name="url_source_code_codeberg" translatable="false">https://codeberg.org/LibreFitOrg/LibreFit</string>
+    <string name="url_source_code_codeberg" translatable="false">https://codeberg.org/OpenFitOrg/OpenFit</string>
     <string name="dismiss_scroll_wheel_automatically">Ignorar roda do mouse automaticamente</string>
     <string name="language_arabic">Árabe</string>
     <string name="language_catalan">Catalão</string>

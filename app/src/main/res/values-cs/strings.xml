@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LibreFit</string>
+    <string name="app_name">OpenFit</string>
     <string name="home">Domů</string>
     <string name="profile">Profil</string>
     <string name="settings">Nastavení</string>
@@ -16,11 +16,11 @@
     <string name="contribute">Přispět</string>
     <string name="info">Informace</string>
     <string name="privacy_policy">Zásady ochrany soukromí</string>
-    <string name="privacy_policy_desc">LibreFit nemá přistup k internetu. Uživatelská data proto nikdy neopustí zařízení.</string>
+    <string name="privacy_policy_desc">OpenFit nemá přistup k internetu. Uživatelská data proto nikdy neopustí zařízení.</string>
     <string name="website">Webová stránka</string>
     <string name="source_code">Zdrojový kód</string>
     <string name="license">Licence</string>
-    <string name="license_desc">LibreFit je licencovaný pod licencí GNU General Public License v3.0 (GPL-3).</string>
+    <string name="license_desc">OpenFit je licencovaný pod licencí GNU General Public License v3.0 (GPL-3).</string>
     <string name="contributors">Přispěvatelé</string>
     <string name="founder">Zakladatel/ka</string>
     <string name="translators">Překladatelé</string>
@@ -123,7 +123,7 @@
     <string name="delete_measurement_question">Smazat měření?</string>
     <string name="delete_measurement_text">Opravdu smazat toto měření? Tuto akci nelze odčinit</string>
     <string name="before_starting_the_workout">Před začátkem workoutu</string>
-    <string name="best_experience_permissions">Pro nejlepší zážitek v LibreFitu musí být povoleno následující oprávnění:</string>
+    <string name="best_experience_permissions">Pro nejlepší zážitek v OpenFitu musí být povoleno následující oprávnění:</string>
     <string name="notifications_permission">Oznámení</string>
     <string name="notifications_permission_desc">Ooravňuje posílat oznámení o běžících workoutech a intervalech odpočinku.</string>
     <string name="app_works_without_permission">Aplikace bude fungovat i bez tohoto oprávnění.</string>
@@ -142,11 +142,11 @@
     <string name="start_completing_workout">Začněte dokončením workoutu</string>
     <string name="privacy">Soukromí</string>
     <string name="privacy_notice">Oznámení o ochraně osobních údajů</string>
-    <string name="privacy_notice_summary">LibreFit poskytuje **maximální úroveň soukromí** díky tomu, že **nemá přístup k internetu**. Navíc jsou všechna oprávnění **volitelná** a nepovolují sběr dat.</string>
+    <string name="privacy_notice_summary">OpenFit poskytuje **maximální úroveň soukromí** díky tomu, že **nemá přístup k internetu**. Navíc jsou všechna oprávnění **volitelná** a nepovolují sběr dat.</string>
     <string name="privacy_notice_optional_perm">Volitelná oprávnění</string>
     <string name="privacy_notice_notification_perm">**Oznámení**: Toto oprávnění umožňuje aplikaci posílat oznámení o vašich právě probíhajících trénincích a upozornění o konci přestávek.</string>
     <string name="privacy_notice_default_perm">Samovolně udělené oprávnění</string>
-    <string name="privacy_notice_foreground_perm">**Služba v popředí**: Toto oprávnění je automaticky uděleno při instalaci LibreFitu a umožňuje to aplikaci běžet na popředí při tréninku.</string>
+    <string name="privacy_notice_foreground_perm">**Služba v popředí**: Toto oprávnění je automaticky uděleno při instalaci OpenFitu a umožňuje to aplikaci běžet na popředí při tréninku.</string>
     <string name="workout">Cvičení</string>
     <string name="quit_workout_question">Ukončit workout?</string>
     <string name="quit_workout_text">Opravdu ukončit workout? Nebude uložen</string>
@@ -193,7 +193,7 @@
     <string name="exercises_distribution">Distribuce cviků</string>
     <string name="workout_saved">Workout uložen</string>
     <string name="routine_saved">Rutina uložena</string>
-    <string name="librefit_made_by_you">je vytvořen s ❤\n pro vás lidmi, jako jste vy</string>
+    <string name="openfit_made_by_you">je vytvořen s ❤\n pro vás lidmi, jako jste vy</string>
     <string name="supporter_version">Verze pro podporovatele</string>
     <string name="to_verify">Ověřit</string>
     <string name="verify_code">Ověřit kód</string>
@@ -202,8 +202,8 @@
     <string name="exercise_saved">Cvičení uložené</string>
     <string name="valid_companion_app_signature">Platná aplikace společníka</string>
     <string name="invalid_companion_app_signature">Neplatný společník app</string>
-    <string name="librefit_app_not_found">Čeština Hledat</string>
-    <string name="librefit_signature_error">LibreFit chyba podpisu</string>
+    <string name="openfit_app_not_found">Čeština Hledat</string>
+    <string name="openfit_signature_error">OpenFit chyba podpisu</string>
     <string name="companion_app_not_found">Aplikace Companion nebyla nalezena</string>
     <string name="companion_signature_error">Kompanion app podpis chyba</string>
     <string name="valid_code">Platný kód</string>
@@ -219,9 +219,9 @@
     <string name="unknown_error">Neznámá chyba</string>
     <string name="lets_build">Pojďme stavět</string>
     <string name="together">dohromady</string>
-    <string name="motivation_1">LibreFit je vášní projekt, postavený osobou, která se domnívá, že software by měl být otevřený, jednoduchý, krásný a především respekt vašeho soukromí.</string>
+    <string name="motivation_1">OpenFit je vášní projekt, postavený osobou, která se domnívá, že software by měl být otevřený, jednoduchý, krásný a především respekt vašeho soukromí.</string>
     <string name="motivation_2">Nalijte nespočet hodin do návrhu, kódování a překončování všech detailů, abyste vytvořili nejlepší možný zážitek. Je to pro vás závazek, uživatele a na lepší digitální svět.</string>
-    <string name="motivation_3">LibreFit je možné pouze s vaší podporou, ať už darováním nebo tím, že přispíváte k kódu nebo překladům.</string>
+    <string name="motivation_3">OpenFit je možné pouze s vaší podporou, ať už darováním nebo tím, že přispíváte k kódu nebo překladům.</string>
     <string name="motivation_4">Všichni donators a přispěvatelé dostanou podporu verzi a kredit v aplikaci a na GitHubu.</string>
     <string name="insert_code">Vložte kód</string>
     <string name="step">Krok</string>
@@ -332,7 +332,7 @@
     <string name="not_use_scroll_wheel_for_input_desc">Zadávejte hodnoty přímo pomocí klávesnice místo rolovacího kolečka.</string>
     <string name="tut_create_routine_5">Gratulujeme, vytvořili jste si svou první rutinu! Nyní ji můžete použít k zahájení tréninku.</string>
     <string name="complete_workout">Kompletní trénink</string>
-    <string name="tut_complete_workout_headline">Když začnete s tréninkem, zaznamenáváte si živý záznam. LibreFit zobrazuje váš dosavadní výkon pro každou sérii, což usnadňuje vyzývání vlastních činů a snahu o postupné přetížení.</string>
+    <string name="tut_complete_workout_headline">Když začnete s tréninkem, zaznamenáváte si živý záznam. OpenFit zobrazuje váš dosavadní výkon pro každou sérii, což usnadňuje vyzývání vlastních činů a snahu o postupné přetížení.</string>
     <string name="tut_complete_workout_1">Chcete-li začít zapisovat, začněte trénink z jedné ze svých rutin nebo si vyberte prázdný trénink pro spontánní sezení.</string>
     <string name="tut_complete_workout_2">Pokud jste začali s rutinou, vaše plánované cviky budou předem načteny. Další můžete přidávat i za pochodu.</string>
     <string name="tut_complete_workout_3">Zaznamenejte si váhu a počet opakování pro každou sérii. Když označíte sérii jako dokončenou, automaticky se spustí časovač odpočinku v dolní části obrazovky.</string>
@@ -345,7 +345,7 @@
     <string name="statistics_desc">- **Uplynulý čas**: celková délka tréninku.\n- **Datum**: označuje datum, kdy byl trénink dokončen.\n- **Objem**: celkové množství zvednuté váhy během tréninku, vypočítané vynásobením počtu opakování provedených pro každou dokončenou sérii zvednutou váhou. Vyšší objem je spojen s větší svalovou hypertrofií a nárůstem síly v průběhu času.\n- **Cvičení**: celkový počet cviků zahrnutých v tomto tréninku.\n- **Celkem sérií**: kumulativní počet sérií plánovaných pro každé cvičení v tréninku. Série je skupina po sobě jdoucích opakování provedených bez odpočinku.\n- **Dokončené série**: počet sérií, které byly dokončeny podle plánu tréninku.</string>
     <string name="muscle_distribution_desc">- Tento graf zobrazuje **průměrný výkon každého svalu za specifická časová období** na základě zvoleného parametru.\n- Legenda identifikuje časové období reprezentované jednotlivými sloupci.\n- Sloupec **Historické** zahrnuje všechna cvičení dokončená před každým zobrazeným časovým obdobím.\n- Parametr lze změnit výběrem nového parametru nad grafem.</string>
     <string name="exercises_distribution_desc">- Tento graf zobrazuje **průměrný výkon každého cvičení za konkrétní časové úseky** na základě zvoleného parametru.\n- Legenda identifikuje časové období reprezentované jednotlivými sloupci.\n- Sloupec **Historické** zahrnuje všechny tréninky dokončené před každým zobrazeným časovým úsekem.\n- Parametr lze změnit výběrem nového parametru nad grafem.</string>
-    <string name="librefit_is_under_threat">LibreFit je v ohrožení</string>
-    <string name="librefit_is_under_threat_desc">- Od září 2026 plánuje Google uzamknout Android tím, že **vám zablokuje instalaci jakékoli aplikace**, pokud její vývojář nezaplatil poplatek, nezaregistroval se a nepředal Googlu osobní identifikační údaje.\n- Tato politika ničí otevřený ekosystém Androidu a **odebírá vás o základní právo zvolit si, jaký software můžete spustit na svém zařízení**.\n- Navštivte prosím [keepandroidopen.org](https://keepandroidopen.org), kde se dozvíte více o této hrozbě pro vaši digitální svobodu a o tom, jak ji můžete zastavit.</string>
+    <string name="openfit_is_under_threat">OpenFit je v ohrožení</string>
+    <string name="openfit_is_under_threat_desc">- Od září 2026 plánuje Google uzamknout Android tím, že **vám zablokuje instalaci jakékoli aplikace**, pokud její vývojář nezaplatil poplatek, nezaregistroval se a nepředal Googlu osobní identifikační údaje.\n- Tato politika ničí otevřený ekosystém Androidu a **odebírá vás o základní právo zvolit si, jaký software můžete spustit na svém zařízení**.\n- Navštivte prosím [keepandroidopen.org](https://keepandroidopen.org), kde se dozvíte více o této hrozbě pro vaši digitální svobodu a o tom, jak ji můžete zastavit.</string>
     <string name="weight">Hmotnost</string>
 </resources>
