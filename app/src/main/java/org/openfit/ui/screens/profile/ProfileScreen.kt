@@ -274,18 +274,6 @@ private fun SharedTransitionScope.ProfileScreenContent(
                             text = stringResource(R.string.start_completing_workout),
                             textAlign = TextAlign.Center,
                         )
-                        IconButton(
-                            onClick = {
-                                navController.navigate(Route.TutorialScreen(TutorialContent.COMPLETE_WORKOUT)) {
-                                    launchSingleTop = true
-                                }
-                            }
-                        ) {
-                            Icon(
-                                painter = painterResource(R.drawable.ic_help),
-                                contentDescription = stringResource(R.string.help)
-                            )
-                        }
                     }
                 }
             }

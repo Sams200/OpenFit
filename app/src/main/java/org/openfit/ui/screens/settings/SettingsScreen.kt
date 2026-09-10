@@ -132,7 +132,6 @@ fun SettingsScreen(
         keepWorkoutScreenOn = keepWorkoutScreenOn,
         restTimerSoundOn = restTimerSoundOn,
         useScrollWheelForInput = useScrollWheelForInput,
-        showExercisesImages = showExercisesImages,
         isWorkoutHeaderSticky = isWorkoutHeaderSticky,
         dismissScrollWheelInputAutomatically = dismissScrollWheelInputAutomatically,
         unitSystem = unitSystem,
@@ -142,10 +141,6 @@ fun SettingsScreen(
         onRestTimerSoundOnChange = viewModel::saveRestTimerSoundOn,
         onIsWorkoutHeaderStickyChange = viewModel::saveIsWorkoutHeaderSticky,
         onUseScrollWheelForInputChange = viewModel::saveUseScrollWheelForInput,
-        onShowExercisesImagesChange = viewModel::saveShowExercisesImages,
-        showConfirmDialogShowExerciseImages = {
-            showConfirmDialogDisplayExerciseImages = true
-        },
         onDismissScrollWhellInputAutomaticallyChange = viewModel::saveDismissScrollWheelInputAutomatically
     )
 }
@@ -161,7 +156,6 @@ private fun SettingsScreenContent(
     restTimerSoundOn: Boolean,
     isWorkoutHeaderSticky: Boolean,
     useScrollWheelForInput: Boolean,
-    showExercisesImages: Boolean?,
     dismissScrollWheelInputAutomatically: Boolean,
     unitSystem: UnitSystem,
     updatePreferences: (List<DialogPreference>) -> Unit,
@@ -170,8 +164,6 @@ private fun SettingsScreenContent(
     onRestTimerSoundOnChange: (Boolean) -> Unit,
     onIsWorkoutHeaderStickyChange: (Boolean) -> Unit,
     onUseScrollWheelForInputChange: (Boolean) -> Unit,
-    onShowExercisesImagesChange: (Boolean) -> Unit,
-    showConfirmDialogShowExerciseImages: () -> Unit,
     onDismissScrollWhellInputAutomaticallyChange: (Boolean) -> Unit,
 ) {
     OpenFitScaffold(
@@ -266,22 +258,6 @@ private fun SettingsScreenContent(
                     icon = painterResource(R.drawable.ic_sticker),
                     settingDesc = stringResource(if (isWorkoutHeaderSticky) R.string.stick_status_bar_desc else R.string.not_stick_status_bar_desc),
                     settingName = stringResource(R.string.stick_status_bar)
-                )
-            }
-
-            item {
-                SettingItem(
-                    isChecked = showExercisesImages == true,
-                    onClick = {
-                        if (showExercisesImages != null) {
-                            onShowExercisesImagesChange(!showExercisesImages)
-                        } else {
-                            showConfirmDialogShowExerciseImages()
-                        }
-                    },
-                    icon = painterResource(if (showExercisesImages == true) R.drawable.ic_image else R.drawable.ic_hide_image),
-                    settingName = stringResource(R.string.show_images),
-                    settingDesc = stringResource(if (showExercisesImages == true) R.string.show_images_desc else R.string.hide_images_desc)
                 )
             }
 
@@ -402,7 +378,6 @@ fun SettingsScreenPreview() {
             updatePreferences = {},
             isWorkoutHeaderSticky = isWorkoutHeaderSticky,
             useScrollWheelForInput = useScrollWheelForInput,
-            showExercisesImages = displayExercisesImages,
             dismissScrollWheelInputAutomatically = dismissScrollWheelInputAutomatically,
             unitSystem = UnitSystem.entries.random(),
             onMaterialModeChange = { materialModeOn = it },
@@ -410,8 +385,6 @@ fun SettingsScreenPreview() {
             onRestTimerSoundOnChange = { restTimerSoundOn = it },
             onIsWorkoutHeaderStickyChange = { isWorkoutHeaderSticky = it },
             onUseScrollWheelForInputChange = { useScrollWheelForInput = it },
-            onShowExercisesImagesChange = { displayExercisesImages = it },
-            showConfirmDialogShowExerciseImages = {},
             onDismissScrollWhellInputAutomaticallyChange = {
                 dismissScrollWheelInputAutomatically = it
             }

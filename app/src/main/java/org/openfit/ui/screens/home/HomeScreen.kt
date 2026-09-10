@@ -308,18 +308,6 @@ private fun SharedTransitionScope.HomeScreenContent(
                         text = stringResource(R.string.start_creating_routine),
                         textAlign = TextAlign.Center
                     )
-                    IconButton(
-                        onClick = {
-                            navController.navigate(Route.TutorialScreen()) {
-                                launchSingleTop = true
-                            }
-                        }
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_help),
-                            contentDescription = stringResource(R.string.help)
-                        )
-                    }
                 }
             }
         }
